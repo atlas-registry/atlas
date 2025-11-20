@@ -35,7 +35,8 @@ ROLE / CONTEXT / GOAL / FORMAT / INSTRUCTIONS / RULES / {{USERDATA}}
   "labels": ["tag1"],
   "description_fr": "Description...",
   "prompt": "Le prompt complet...",
-  "example_input": "Exemple"
+  "example_input": "Exemple",
+  "example_output": "Exemple"
 }
 ```
 
