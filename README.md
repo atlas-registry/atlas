@@ -135,7 +135,6 @@ Quand tu proposes un nouveau prompt, essaie de respecter ce format autant que po
 L’interface qui consomme ces données est disponible ici :
 
 ➡️ **Site** : <https://atlas.voidcorp.io>
-➡️ **Code du site** : (repo `atlas-site` sur le compte `folpe`)
 
 ---
 
