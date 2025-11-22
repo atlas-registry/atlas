@@ -4,8 +4,15 @@ Toutes les modifications notables de ce projet seront documentées dans ce fichi
 
 ## [Non publié]
 
+### Ajouté
+
+- Enables auto-merge for changelog PRs
+
 ### Autres
 
+- Merge pull request #4 from folpe/chore/update-changelog
+
+docs: update changelog
 - Update prompts.json to include example inputs and outputs for "Reputation Power Check" and "Business Fragility Check", enhancing the clarity and usability of the evaluation frameworks for personal branding and business analysis.
 - Add new prompts for "Reputation Power Check" and "Business Fragility Check" to prompts.json, expanding the toolset for personal branding and business analysis with structured evaluation frameworks.
 - Enhance prompts.json by adding example inputs and outputs for existing prompts, improving clarity and usability for users analyzing SaaS ideas and automation tasks.
@@ -43,6 +50,7 @@ Add MIT License to the project
 
 ### Documentation
 
+- Update changelog
 - Update changelog
 
 
