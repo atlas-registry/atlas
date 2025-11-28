@@ -7,6 +7,7 @@ Toutes les modifications notables de ce projet seront documentées dans ce fichi
 ### Ajouté
 
 - Add initial French guide data for prompt engineering and MCP agent installation
+- Add initial French guide data for prompt engineering and MCP agent installation
 - Enables auto-merge for changelog PRs
 
 ### Autres
@@ -51,6 +52,7 @@ Add MIT License to the project
 
 ### Documentation
 
+- Update changelog (#6)
 - Update changelog (#5)
 - Update changelog
 - Update changelog
