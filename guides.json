@@ -1,0 +1,35 @@
+[
+  {
+    "id": "1",
+    "title": "Débuter avec les Prompts",
+    "description": "Le guide complet pour comprendre comment parler aux IA et obtenir de meilleurs résultats.",
+    "category": "basics",
+    "content": "# Débuter avec les Prompts\n\nLa plupart des gens pensent qu’un « bon prompt », c’est juste une phrase bien tournée. En réalité, c’est surtout : clarifier ce que tu veux, donner du contexte, et réduire les zones d’ambiguïté.\n\n## 1. Commencer simple… puis préciser\nUn prompt efficace n’est pas forcément long. Il doit juste éviter les zones floues.\n\nExemple :\n- ❌ « Donne-moi une idée de business »\n- ✅ « Donne-moi une idée de business B2C, marge >40%, lancement en 30 jours, budget 2 000€, pas de logistique physique »\n\nLes modèles détestent l’ambiguïté. Mais inverser le problème : un prompt trop rigide peut brider la créativité. Cherche l’équilibre.\n\n## 2. Donne un rôle clair au modèle\nDire “sois expert” ne suffit pas. Explique ce que tu attends concrètement.\n\n## 3. Indique ton objectif final\nLes modèles devinent mal. Dis ce que tu veux : une liste, un plan, un texte court, une comparaison, etc.\n\n## 4. Montre un exemple\nC’est la technique la plus sous-estimée. Un exemple = énorme gain de clarté.\n\n## 5. Questionne toujours la réponse\nUne réponse n’est pas la vérité. Demande systématiquement :\n- « Qu’est-ce qui pourrait être faux ? »\n- « Donne l’hypothèse opposée. »\n\n## 6. Boucle d’amélioration\nLe prompt parfait n’existe pas du premier coup. Tu testes → ajustes → simplifies → verrouilles.\n",
+    "readTime": 5,
+    "difficulty": "beginner",
+    "slug": "debuter-avec-les-prompts",
+    "date": "2024-03-15"
+  },
+  {
+    "id": "2",
+    "title": "Prompt Engineering 101",
+    "description": "Techniques avancées pour structurer vos prompts : Chain-of-Thought, Few-Shot, et plus.",
+    "category": "engineering",
+    "content": "# Prompt Engineering 101\n\nBeaucoup pensent que le Prompt Engineering, c’est « trouver la phrase magique ». Non. C’est surtout structurer ta pensée pour éviter que le modèle parte dans la mauvaise direction.\n\n## 1. Chain-of-Thought (CoT)\nDemander au modèle d'expliquer son raisonnement pas à pas. Utile pour comprendre les hypothèses. Limite : si ton prompt est vague, le raisonnement sera faux mais très confiant.\n\n## 2. Few-Shot Examples\nTu montres 1 à 3 exemples. C’est la technique la plus puissante : les modèles imitent mieux qu’ils ne comprennent.\n\n## 3. Définir des règles claires\nStructure classique : Contexte → But → Contraintes → Format → Tonalité → Exemples. Trop de règles peuvent créer des contradictions.\n\n## 4. Demander un contrôle qualité interne\nDemande au modèle de détecter incohérences ou biais et de proposer une version 2. Très efficace.\n\n## 5. Dire ce que tu ne veux PAS\nExemple : « Pas d’intro. Pas de conclusion. Phrases courtes. »\n\n## 6. Approche itérative\nTu testes, ajustes, simplifies. Le prompt engineering est expérimental, pas théorique.\n",
+    "readTime": 10,
+    "difficulty": "intermediate",
+    "slug": "prompt-engineering-101",
+    "date": "2024-03-18"
+  },
+  {
+    "id": "3",
+    "title": "Installer un Agent MCP",
+    "description": "Tutoriel pas à pas pour configurer votre premier serveur MCP avec Claude Desktop.",
+    "category": "mcp",
+    "content": "# Installer un Agent MCP\n\nInstaller un agent MCP est simple, mais pas « magique ». Tu dois comprendre où tourne l’agent, comment il expose son serveur, et comment Claude Desktop le détecte.\n\n## 1. Prérequis\n- Claude Desktop installé\n- Node.js ou Python\n- Un dossier pour tes agents\n\nVersionner tes agents en Git est conseillé.\n\n## 2. Installer et lancer un agent\nExemple Node :\n```bash\nnpm install\nnpm run dev\n```\n\nTu dois voir un message du style : « MCP server running… ». Sinon, problème de config.\n\n## 3. Déclarer l’agent dans Claude Desktop\nDans `claude_desktop_config.json` :\n```json\n{\n  \"mcpServers\": {\n    \"mon-agent\": {\n      \"command\": \"node\",\n      \"args\": [\"index.js\"]\n    }\n  }\n}\n```\nRedémarre Claude. L’agent doit apparaître.\n\n## 4. Tester\nSi l’agent renvoie une réponse vide ou rien, souvent :\n- mauvaise structure JSON,\n- mauvaise commande,\n- port déjà pris.\n\n## 5. Sécurité\nUn agent MCP peut lire/écrire/exécuter. Ne fais tourner que ce que tu comprends.\n",
+    "readTime": 8,
+    "difficulty": "advanced",
+    "slug": "installer-agent-mcp",
+    "date": "2024-03-20"
+  }
+]
