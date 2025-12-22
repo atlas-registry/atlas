@@ -56,6 +56,7 @@ Add MIT License to the project
 
 ### Documentation
 
+- Update changelog (#13)
 - Update changelog (#12)
 - Update changelog (#11)
 - Update changelog (#10)
@@ -68,6 +69,7 @@ Add MIT License to the project
 
 ### Refactoring
 
+- Revise guides in guides.json to enhance clarity and usability, updating descriptions, content structure, and read times for improved user understanding.
 - Revise tool entries in tools.json to enhance clarity and categorization, updating descriptions and categories for various AI tools, and removing outdated entries.
 
 
