@@ -2,361 +2,161 @@
   {
     "id": "openai",
     "name": "OpenAI",
-    "url": "https://openai.com",
-    "category": "llm_providers",
-    "labels": ["cloud", "api", "payant"],
-    "description_fr": "Plateforme de modèles GPT (texte, image, audio, vision) avec API et assistants."
+    "category": "penser_decider",
+    "description": "Modèles GPT pour raisonner, écrire, structurer et explorer rapidement.",
+    "why": "Quand tu veux clarifier une idée ou tester un raisonnement sans tourner en rond."
   },
   {
     "id": "anthropic",
-    "name": "Anthropic",
-    "url": "https://www.anthropic.com",
-    "category": "llm_providers",
-    "labels": ["cloud", "api", "payant"],
-    "description_fr": "Modèles Claude orientés sécurité et long contexte, adaptés à l’analyse de documents et d’outils."
+    "name": "Claude (Anthropic)",
+    "category": "penser_decider",
+    "description": "Modèles orientés raisonnement long, analyse et écriture structurée.",
+    "why": "Pour aller au fond d’un sujet ou prendre une décision complexe sans biais."
   },
   {
     "id": "google_gemini",
-    "name": "Google AI Studio (Gemini)",
-    "url": "https://ai.google.dev",
-    "category": "llm_providers",
-    "labels": ["cloud", "api", "freemium"],
-    "description_fr": "Accès aux modèles Gemini (texte, image, audio, vidéo) via console web ou API."
-  },
-  {
-    "id": "mistral",
-    "name": "Mistral AI",
-    "url": "https://mistral.ai",
-    "category": "llm_providers",
-    "labels": ["cloud", "open-source", "api", "freemium"],
-    "description_fr": "Modèles légers et open-source (Mistral, Mixtral, Codestral) avec API hébergée."
+    "name": "Google Gemini",
+    "category": "penser_decider",
+    "description": "Modèles multimodaux intégrés à l’écosystème Google.",
+    "why": "Utile pour croiser des points de vue et confronter une idée sous un autre angle."
   },
   {
     "id": "deepseek",
     "name": "DeepSeek",
-    "url": "https://www.deepseek.com/en",
-    "category": "llm_providers",
-    "labels": ["cloud", "open-source", "api", "freemium"],
-    "description_fr": "Famille de modèles LLM (V3, R1, Janus) avec application, API et versions open-source à faible coût."
-  },
-  {
-    "id": "xai_grok",
-    "name": "xAI / Grok",
-    "url": "https://x.ai",
-    "category": "llm_providers",
-    "labels": ["cloud", "api", "freemium"],
-    "description_fr": "Modèles Grok connectés aux données temps réel de X (Twitter)."
-  },
-  {
-    "id": "cohere",
-    "name": "Cohere",
-    "url": "https://cohere.com",
-    "category": "llm_providers",
-    "labels": ["cloud", "api", "payant"],
-    "description_fr": "Modèles spécialisés dans la recherche, le RAG et les usages entreprise."
+    "category": "penser_decider",
+    "description": "Modèles performants et accessibles, orientés raisonnement et code.",
+    "why": "À explorer quand tu veux tester une alternative efficace à faible coût."
   },
 
   {
-    "id": "ollama",
-    "name": "Ollama",
-    "url": "https://ollama.ai",
-    "category": "local_llm",
-    "labels": ["self-host", "open-source", "gratuit"],
-    "description_fr": "Lance des modèles LLM en local avec une seule commande (Mac / Linux / Windows)."
+    "id": "v0",
+    "name": "v0",
+    "category": "construire_vite",
+    "description": "Génération d’UI React/Tailwind à partir de prompts.",
+    "why": "Passer d’une idée à une interface concrète en quelques minutes."
   },
   {
-    "id": "lm_studio",
-    "name": "LM Studio",
-    "url": "https://lmstudio.ai",
-    "category": "local_llm",
-    "labels": ["desktop", "gratuit"],
-    "description_fr": "Interface desktop pour télécharger et tester des modèles de langage localement."
+    "id": "lovable",
+    "name": "Lovable",
+    "category": "construire_vite",
+    "description": "Générateur d’apps full-stack assisté par IA.",
+    "why": "Prototyper un produit complet sans sur-architecturer trop tôt."
   },
   {
-    "id": "jan_ai",
-    "name": "Jan",
-    "url": "https://jan.ai",
-    "category": "local_llm",
-    "labels": ["desktop", "open-source", "gratuit"],
-    "description_fr": "Alternative locale à ChatGPT, avec modèles et historique stockés en local."
+    "id": "bolt",
+    "name": "Bolt.new",
+    "category": "construire_vite",
+    "description": "Environnement de prototypage rapide front/back dans le navigateur.",
+    "why": "Tester une idée technique sans installer ni configurer quoi que ce soit."
   },
   {
-    "id": "text_generation_webui",
-    "name": "Text Generation WebUI",
-    "url": "https://github.com/oobabooga/text-generation-webui",
-    "category": "local_llm",
-    "labels": ["self-host", "open-source"],
-    "description_fr": "Interface web open-source pour héberger et tester différents modèles de génération de texte."
-  },
-
-  {
-    "id": "promptmetheus",
-    "name": "Promptmetheus",
-    "url": "https://promptmetheus.com",
-    "category": "prompt_engineering",
-    "labels": ["cloud", "desktop", "freemium"],
-    "description_fr": "IDE de prompt engineering : tests, datasets, évaluations et multi-modèles pour professionnaliser ses prompts."
-  },
-  {
-    "id": "promptlayer",
-    "name": "PromptLayer",
-    "url": "https://www.promptlayer.com",
-    "category": "prompt_engineering",
-    "labels": ["cloud", "freemium"],
-    "description_fr": "Workbench pour suivre, versionner et analyser les prompts et appels API en production."
-  },
-  {
-    "id": "langsmith",
-    "name": "LangSmith",
-    "url": "https://www.langchain.com/langsmith",
-    "category": "prompt_engineering",
-    "labels": ["cloud", "payant"],
-    "description_fr": "Traçage, observabilité et évaluation des applications construites avec LangChain."
-  },
-  {
-    "id": "promptfoo",
-    "name": "promptfoo",
-    "url": "https://www.promptfoo.dev",
-    "category": "prompt_engineering",
-    "labels": ["open-source", "self-host"],
-    "description_fr": "Outil de test, régression et scoring de prompts avec datasets et comparaison de modèles."
+    "id": "figma_make",
+    "name": "Figma Make",
+    "category": "construire_vite",
+    "description": "Création et itération rapide de design via IA dans Figma.",
+    "why": "Explorer des pistes visuelles sans rester bloqué sur la page blanche."
   },
 
   {
     "id": "n8n",
     "name": "n8n",
-    "url": "https://n8n.io",
-    "category": "automation",
-    "labels": ["open-source", "self-host", "cloud", "freemium"],
-    "description_fr": "Automatisation visuelle pour orchestrer APIs, webhooks, LLM et bases de données."
+    "category": "automatiser",
+    "description": "Automatisation open-source pour orchestrer APIs, données et IA.",
+    "why": "Gagner du temps sans perdre le contrôle ni dépendre d’une boîte noire."
   },
   {
-    "id": "make",
-    "name": "Make",
-    "url": "https://www.make.com",
-    "category": "automation",
-    "labels": ["cloud", "no-code", "freemium"],
-    "description_fr": "Plateforme d’automatisation visuelle avec de nombreuses intégrations SaaS et modules IA."
-  },
-  {
-    "id": "zapier",
-    "name": "Zapier",
-    "url": "https://zapier.com",
-    "category": "automation",
-    "labels": ["cloud", "no-code", "freemium"],
-    "description_fr": "Automatisation pour connecter rapidement plusieurs services, avec actions IA intégrées."
-  },
-  {
-    "id": "langflow",
-    "name": "LangFlow",
-    "url": "https://www.langflow.org",
-    "category": "automation",
-    "labels": ["open-source", "self-host"],
-    "description_fr": "Builder visuel pour graphes RAG/LLM, basé sur l’écosystème LangChain."
-  },
-  {
-    "id": "flowise",
-    "name": "Flowise",
-    "url": "https://flowiseai.com",
-    "category": "automation",
-    "labels": ["open-source", "self-host"],
-    "description_fr": "Outil node-based pour construire des chatbots et flux RAG/agents via une interface web."
+    "id": "gumloop",
+    "name": "Gumloop",
+    "category": "automatiser",
+    "description": "Automatisation assistée par IA orientée productivité.",
+    "why": "Tester rapidement des automatisations quand la vitesse prime."
   },
 
   {
-    "id": "langgraph",
-    "name": "LangGraph",
-    "url": "https://langchain.com/langgraph",
-    "category": "agents",
-    "labels": ["cloud", "open-source"],
-    "description_fr": "Orchestrateur d’agents basé sur des graphes pour workflows complexes et long-running."
+    "id": "promptmetheus",
+    "name": "Promptmetheus",
+    "category": "qualite_clarte",
+    "description": "IDE pour tester, comparer et structurer des prompts.",
+    "why": "Arrêter l’approximation et comprendre ce qui fonctionne vraiment."
   },
   {
-    "id": "crewai",
-    "name": "CrewAI",
-    "url": "https://www.crewai.com",
-    "category": "agents",
-    "labels": ["open-source", "self-host"],
-    "description_fr": "Framework d’agents multi-rôles pour faire collaborer plusieurs IA sur une même tâche."
-  },
-  {
-    "id": "autogen",
-    "name": "Microsoft AutoGen",
-    "url": "https://microsoft.github.io/autogen/",
-    "category": "agents",
-    "labels": ["open-source"],
-    "description_fr": "Framework pour créer des systèmes IA multi-agents capables d’appeler des outils."
-  },
-  {
-    "id": "openai_swarm",
-    "name": "OpenAI Swarm",
-    "url": "https://github.com/openai/swarm",
-    "category": "agents",
-    "labels": ["open-source"],
-    "description_fr": "Mini-framework officiel pour orchestrer plusieurs workers IA simples et spécialisés."
+    "id": "promptlayer",
+    "name": "PromptLayer",
+    "category": "qualite_clarte",
+    "description": "Suivi et versioning des prompts et appels IA.",
+    "why": "Garder une trace claire de ce qui marche et de ce qui casse."
   },
 
   {
     "id": "midjourney",
     "name": "Midjourney",
-    "url": "https://www.midjourney.com",
-    "category": "media",
-    "labels": ["cloud", "payant"],
-    "description_fr": "Génération d’images artistiques de haute qualité, principalement via Discord."
+    "category": "creer_montrer",
+    "description": "Génération d’images artistiques haut de gamme.",
+    "why": "Donner une identité forte à une idée dès le départ."
   },
   {
-    "id": "flux_bfl",
+    "id": "flux",
     "name": "Flux (Black Forest Labs)",
-    "url": "https://blackforestlabs.ai",
-    "category": "media",
-    "labels": ["cloud", "open-source", "freemium"],
-    "description_fr": "Modèles de génération d’images haut de gamme (FLUX.1, etc.), API et modèles téléchargeables."
-  },
-  {
-    "id": "stable_diffusion",
-    "name": "Stable Diffusion",
-    "url": "https://stability.ai",
-    "category": "media",
-    "labels": ["open-source", "self-host", "cloud"],
-    "description_fr": "Modèles génératifs open-source pour l’image (SDXL, etc.), utilisables en local ou via API."
+    "category": "creer_montrer",
+    "description": "Modèles de génération d’images performants et flexibles.",
+    "why": "Créer des visuels propres et exploitables en production."
   },
   {
     "id": "leonardo",
     "name": "Leonardo AI",
-    "url": "https://leonardo.ai",
-    "category": "media",
-    "labels": ["cloud", "freemium"],
-    "description_fr": "Génération d’images et d’assets (jeux, textures, etc.) avec outils orientés production."
-  },
-  {
-    "id": "runway",
-    "name": "Runway",
-    "url": "https://runwayml.com",
-    "category": "media",
-    "labels": ["cloud", "payant"],
-    "description_fr": "Plateforme de montage et génération vidéo assistée par IA pour créateurs."
-  },
-  {
-    "id": "pika",
-    "name": "Pika",
-    "url": "https://pika.art",
-    "category": "media",
-    "labels": ["cloud", "freemium"],
-    "description_fr": "Génération de clips vidéo à partir de texte ou d’images."
+    "category": "creer_montrer",
+    "description": "Génération d’assets visuels orientés production.",
+    "why": "Produire rapidement des visuels cohérents sans designer dédié."
   },
   {
     "id": "heygen",
     "name": "HeyGen",
-    "url": "https://www.heygen.com",
-    "category": "media",
-    "labels": ["cloud", "payant"],
-    "description_fr": "Création d’avatars vidéo IA avec lip-sync multilingue et voix personnalisées."
+    "category": "creer_montrer",
+    "description": "Création de vidéos avec avatars IA.",
+    "why": "Expliquer un produit ou une idée sans se cacher derrière des slides."
   },
   {
     "id": "elevenlabs",
     "name": "ElevenLabs",
-    "url": "https://elevenlabs.io",
-    "category": "media",
-    "labels": ["cloud", "api", "freemium"],
-    "description_fr": "Synthèse vocale réaliste, clonage de voix et effets audio génératifs."
+    "category": "creer_montrer",
+    "description": "Synthèse vocale réaliste et clonage de voix.",
+    "why": "Ajouter une voix crédible sans matériel ni studio."
   },
 
   {
-    "id": "v0",
-    "name": "V0",
-    "url": "https://v0.dev",
-    "category": "dev_nocode",
-    "labels": ["cloud", "no-code", "freemium"],
-    "description_fr": "Générateur d’UI (React/Tailwind) à partir de prompts, orienté dev front et prototypage."
+    "id": "typefully",
+    "name": "Typefully",
+    "category": "diffuser",
+    "description": "Planification et écriture de contenus pour X / LinkedIn.",
+    "why": "Partager régulièrement sans y consacrer trop de charge mentale."
   },
   {
-    "id": "bubble",
-    "name": "Bubble",
-    "url": "https://bubble.io",
-    "category": "dev_nocode",
-    "labels": ["cloud", "no-code", "freemium"],
-    "description_fr": "Plateforme no-code pour créer des applications web complexes, avec intégrations IA."
-  },
-  {
-    "id": "lovable",
-    "name": "Lovable",
-    "url": "https://lovable.dev",
-    "category": "dev_nocode",
-    "labels": ["cloud", "no-code", "freemium"],
-    "description_fr": "Constructeur d’apps full-stack “AI software engineer” synchronisable avec GitHub."
-  },
-  {
-    "id": "bolt_new",
-    "name": "Bolt.new",
-    "url": "https://bolt.new",
-    "category": "dev_nocode",
-    "labels": ["cloud", "freemium"],
-    "description_fr": "Environnement en ligne pour prototyper rapidement des apps front/back avec IA intégrée."
-  },
-  {
-    "id": "replit_agent",
-    "name": "Replit Agent",
-    "url": "https://replit.com/agent",
-    "category": "dev_nocode",
-    "labels": ["cloud", "freemium"],
-    "description_fr": "Assistant pour coder, exécuter et déployer des projets directement dans le navigateur."
+    "id": "buffer",
+    "name": "Buffer",
+    "category": "diffuser",
+    "description": "Planification simple de contenus multi-plateformes.",
+    "why": "Programmer à l’avance pour rester constant sans friction."
   },
 
-  {
-    "id": "pinecone",
-    "name": "Pinecone",
-    "url": "https://www.pinecone.io",
-    "category": "rag_vector_db",
-    "labels": ["cloud", "api", "payant"],
-    "description_fr": "Base vectorielle managée, optimisée pour le RAG en production."
-  },
-  {
-    "id": "weaviate",
-    "name": "Weaviate",
-    "url": "https://weaviate.io",
-    "category": "rag_vector_db",
-    "labels": ["open-source", "self-host", "cloud"],
-    "description_fr": "Moteur de recherche vectoriel open-source avec options hébergées."
-  },
-  {
-    "id": "qdrant",
-    "name": "Qdrant",
-    "url": "https://qdrant.tech",
-    "category": "rag_vector_db",
-    "labels": ["open-source", "self-host", "cloud"],
-    "description_fr": "Base de données vectorielle performante et simple à déployer."
-  },
   {
     "id": "supabase_vector",
     "name": "Supabase Vector",
-    "url": "https://supabase.com",
-    "category": "rag_vector_db",
-    "labels": ["open-source", "self-host", "cloud"],
-    "description_fr": "Stockage vectoriel intégré à Postgres au sein de la plateforme Supabase."
-  },
-
-  {
-    "id": "notion_ai",
-    "name": "Notion AI",
-    "url": "https://www.notion.so/product/ai",
-    "category": "productivity",
-    "labels": ["cloud", "payant"],
-    "description_fr": "Résumés, réécriture et génération de contenu directement dans Notion."
+    "category": "infra_pragmatique",
+    "description": "Stockage vectoriel intégré à Postgres.",
+    "why": "Mettre du RAG en place sans ajouter une brique inutile."
   },
   {
-    "id": "microsoft_copilot",
-    "name": "Microsoft Copilot",
-    "url": "https://copilot.microsoft.com",
-    "category": "productivity",
-    "labels": ["cloud", "freemium"],
-    "description_fr": "Assistant IA intégré à l’écosystème Microsoft (Office, Windows, Edge, etc.)."
+    "id": "ollama",
+    "name": "Ollama",
+    "category": "infra_pragmatique",
+    "description": "Exécution de modèles LLM en local.",
+    "why": "Garder le contrôle et expérimenter sans dépendre du cloud."
   },
   {
-    "id": "arc_search",
-    "name": "Arc Search",
-    "url": "https://arc.net",
-    "category": "productivity",
-    "labels": ["desktop", "mobile", "gratuit"],
-    "description_fr": "Navigateur/moteur IA orienté recherche, qui résume et synthétise les pages web."
+    "id": "claude_code",
+    "name": "Claude Code",
+    "category": "infra_pragmatique",
+    "description": "Assistant IA intégré au code et au refactoring.",
+    "why": "Aller plus vite sans sacrifier la lisibilité ni la logique."
   }
 ]
