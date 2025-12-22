@@ -55,6 +55,7 @@ Add MIT License to the project
 
 ### Documentation
 
+- Update changelog (#11)
 - Update changelog (#10)
 - Update changelog (#8)
 - Update changelog (#7)
@@ -62,5 +63,9 @@ Add MIT License to the project
 - Update changelog (#5)
 - Update changelog
 - Update changelog
+
+### Refactoring
+
+- Revise tool entries in tools.json to enhance clarity and categorization, updating descriptions and categories for various AI tools, and removing outdated entries.
 
 
