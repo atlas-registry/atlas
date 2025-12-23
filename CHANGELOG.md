@@ -56,6 +56,7 @@ Add MIT License to the project
 
 ### Documentation
 
+- Update changelog (#14)
 - Update changelog (#13)
 - Update changelog (#12)
 - Update changelog (#11)
@@ -69,6 +70,7 @@ Add MIT License to the project
 
 ### Refactoring
 
+- Revise prompt for identifying user's "zone de génie" to enhance clarity and effectiveness, focusing on observable impact and structured questioning methodology.
 - Revise guides in guides.json to enhance clarity and usability, updating descriptions, content structure, and read times for improved user understanding.
 - Revise tool entries in tools.json to enhance clarity and categorization, updating descriptions and categories for various AI tools, and removing outdated entries.
 
