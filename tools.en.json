@@ -1,0 +1,184 @@
+[
+  {
+    "id": "openai",
+    "name": "OpenAI",
+    "category": "penser_decider",
+    "link": "https://openai.com",
+    "description": "GPT models for reasoning, writing, structuring, and exploring ideas quickly.",
+    "why": "When you want to clarify an idea or test a line of reasoning without going in circles."
+  },
+  {
+    "id": "anthropic",
+    "name": "Claude (Anthropic)",
+    "category": "penser_decider",
+    "link": "https://www.anthropic.com",
+    "description": "Models focused on long-form reasoning, analysis, and structured writing.",
+    "why": "To dig deep into a topic or make a complex decision without bias."
+  },
+  {
+    "id": "google_gemini",
+    "name": "Google Gemini",
+    "category": "penser_decider",
+    "link": "https://deepmind.google/technologies/gemini",
+    "description": "Multimodal models integrated into the Google ecosystem.",
+    "why": "Useful for cross-referencing perspectives and challenging an idea from a different angle."
+  },
+  {
+    "id": "deepseek",
+    "name": "DeepSeek",
+    "category": "penser_decider",
+    "link": "https://www.deepseek.com",
+    "description": "High-performing and accessible models focused on reasoning and code.",
+    "why": "Worth exploring when you want to test an effective low-cost alternative."
+  },
+
+  {
+    "id": "v0",
+    "name": "v0",
+    "category": "construire_vite",
+    "link": "https://v0.dev",
+    "description": "React/Tailwind UI generation from prompts.",
+    "why": "Go from an idea to a concrete interface in just a few minutes."
+  },
+  {
+    "id": "lovable",
+    "name": "Lovable",
+    "category": "construire_vite",
+    "link": "https://lovable.dev",
+    "description": "AI-assisted full-stack app generator.",
+    "why": "Prototype a complete product without over-architecting too early."
+  },
+  {
+    "id": "bolt",
+    "name": "Bolt.new",
+    "category": "construire_vite",
+    "link": "https://bolt.new",
+    "description": "Rapid front/back prototyping environment in the browser.",
+    "why": "Test a technical idea without installing or configuring anything."
+  },
+  {
+    "id": "figma_make",
+    "name": "Figma Make",
+    "category": "construire_vite",
+    "link": "https://www.figma.com",
+    "description": "Fast design creation and iteration via AI in Figma.",
+    "why": "Explore visual directions without getting stuck on a blank page."
+  },
+
+  {
+    "id": "n8n",
+    "name": "n8n",
+    "category": "automatiser",
+    "link": "https://n8n.io",
+    "description": "Open-source automation for orchestrating APIs, data, and AI.",
+    "why": "Save time without losing control or depending on a black box."
+  },
+  {
+    "id": "gumloop",
+    "name": "Gumloop",
+    "category": "automatiser",
+    "link": "https://www.gumloop.com",
+    "description": "AI-assisted automation focused on productivity.",
+    "why": "Quickly test automations when speed is the priority."
+  },
+
+  {
+    "id": "promptmetheus",
+    "name": "Promptmetheus",
+    "category": "qualite_clarte",
+    "link": "https://promptmetheus.com",
+    "description": "IDE for testing, comparing, and structuring prompts.",
+    "why": "Stop guessing and understand what actually works."
+  },
+  {
+    "id": "promptlayer",
+    "name": "PromptLayer",
+    "category": "qualite_clarte",
+    "link": "https://promptlayer.com",
+    "description": "Prompt and AI call tracking and versioning.",
+    "why": "Keep a clear record of what works and what breaks."
+  },
+
+  {
+    "id": "midjourney",
+    "name": "Midjourney",
+    "category": "creer_montrer",
+    "link": "https://www.midjourney.com",
+    "description": "High-end artistic image generation.",
+    "why": "Give a strong identity to an idea right from the start."
+  },
+  {
+    "id": "flux",
+    "name": "Flux (Black Forest Labs)",
+    "category": "creer_montrer",
+    "link": "https://blackforestlabs.ai",
+    "description": "High-performing and flexible image generation models.",
+    "why": "Create clean, production-ready visuals."
+  },
+  {
+    "id": "leonardo",
+    "name": "Leonardo AI",
+    "category": "creer_montrer",
+    "link": "https://leonardo.ai",
+    "description": "Production-oriented visual asset generation.",
+    "why": "Quickly produce consistent visuals without a dedicated designer."
+  },
+  {
+    "id": "heygen",
+    "name": "HeyGen",
+    "category": "creer_montrer",
+    "link": "https://www.heygen.com",
+    "description": "Video creation with AI avatars.",
+    "why": "Explain a product or idea without hiding behind slides."
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "category": "creer_montrer",
+    "link": "https://elevenlabs.io",
+    "description": "Realistic voice synthesis and voice cloning.",
+    "why": "Add a credible voice without any equipment or studio."
+  },
+
+  {
+    "id": "typefully",
+    "name": "Typefully",
+    "category": "diffuser",
+    "link": "https://typefully.com",
+    "description": "Content planning and writing for X / LinkedIn.",
+    "why": "Share regularly without spending too much mental energy on it."
+  },
+  {
+    "id": "buffer",
+    "name": "Buffer",
+    "category": "diffuser",
+    "link": "https://buffer.com",
+    "description": "Simple multi-platform content scheduling.",
+    "why": "Schedule ahead to stay consistent without friction."
+  },
+
+  {
+    "id": "supabase_vector",
+    "name": "Supabase Vector",
+    "category": "infra_pragmatique",
+    "link": "https://supabase.com/docs/guides/ai/vector-columns",
+    "description": "Vector storage built into Postgres.",
+    "why": "Set up RAG without adding an unnecessary component."
+  },
+  {
+    "id": "ollama",
+    "name": "Ollama",
+    "category": "infra_pragmatique",
+    "link": "https://ollama.com",
+    "description": "Run LLM models locally.",
+    "why": "Keep control and experiment without depending on the cloud."
+  },
+  {
+    "id": "claude_code",
+    "name": "Claude Code",
+    "category": "infra_pragmatique",
+    "link": "https://docs.anthropic.com/en/docs/claude-code",
+    "description": "AI assistant integrated into code and refactoring workflows.",
+    "why": "Move faster without sacrificing readability or logic."
+  }
+]
