@@ -8,9 +8,10 @@ Le but est simple : garder une liste utile, lisible et vraiment utilisée — pa
 ## 🛠️ Comment contribuer
 
 1. **Forkez** le dépôt
-2. Ajoutez ou modifiez un outil dans **deux fichiers** :
-   - `README.md` → ajoutez l’outil dans la bonne section + labels cohérents
-   - `tools.json` → ajoutez l’entrée avec le même schéma que les autres
+2. Ajoutez ou modifiez un outil dans les fichiers concernés :
+   - `tools.fr.json` / `tools.en.json` → ajoutez l'entrée avec le même schéma que les autres (les deux langues doivent avoir les mêmes IDs)
+   - `prompts.fr.json` / `prompts.en.json` → idem pour les prompts
+   - `guides.fr.json` / `guides.en.json` → idem pour les guides
 3. Ouvrez une **Pull Request** incluant :
    - une courte description de l’outil
    - la catégorie envisagée
@@ -33,7 +34,7 @@ ROLE / CONTEXT / GOAL / FORMAT / INSTRUCTIONS / RULES / {{USERDATA}}
   "llm": ["gpt-4o", "claude-3.5"],
   "category": "dev",
   "labels": ["tag1"],
-  "description_fr": "Description...",
+  "description": "Description...",
   "prompt": "Le prompt complet...",
   "example_input": "Exemple",
   "example_output": "Exemple"

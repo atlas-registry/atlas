@@ -19,6 +19,23 @@ jobs:
       - name: Validate JSON
         run: |
           git ls-files '*.json' | while read -r f; do
-            echo "🔍 Checking: $f"
-            jq empty "$f" || { echo "❌ Invalid JSON in $f"; exit 1; }
+            echo "Checking: $f"
+            jq empty "$f" || { echo "Invalid JSON in $f"; exit 1; }
           done
+
+  sync-ids:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify FR/EN ID sync
+        run: |
+          error=0
+          for base in tools prompts guides; do
+            echo "Checking $base FR/EN ID sync..."
+            diff <(jq '[.. | objects | .id // empty]' "$base.fr.json") <(jq '[.. | objects | .id // empty]' "$base.en.json") || {
+              echo "ID mismatch in $base.fr.json vs $base.en.json"
+              error=1
+            }
+          done
+          exit $error

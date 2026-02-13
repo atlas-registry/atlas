@@ -19,13 +19,18 @@ infini impossible à maintenir.
 
 ## 📂 Structure du dépôt
 
-Le dépôt contient principalement deux fichiers de données :
+Le dépôt contient des fichiers de données en deux langues (FR / EN) :
 
-- `tools.json`
-  → Liste d’outils IA (frameworks d’agents, automatisation, LLM providers, etc.)
+- `tools.fr.json` / `tools.en.json`
+  → Liste d'outils IA (frameworks d'agents, automatisation, LLM providers, etc.)
 
-- `prompts.json`
+- `prompts.fr.json` / `prompts.en.json`
   → Liste de prompts IA structurés pour des usages concrets (productivité, dev, business…).
+
+- `guides.fr.json` / `guides.en.json`
+  → Guides pédagogiques avec contenu markdown complet.
+
+Chaque paire FR/EN partage les mêmes IDs dans le même ordre. La CI vérifie la synchronisation.
 
 Ces fichiers sont consommés par le site `atlas.voidcorp.io` qui les affiche avec une interface
 filtrable.
@@ -34,8 +39,8 @@ filtrable.
 
 ## 🔍 Comment c’est utilisé ?
 
-1. Les fichiers `tools.json` et `prompts.json` sont hébergés ici sur GitHub.
-2. Le site front (`atlas-site`) les récupère en lecture seule (via `raw.githubusercontent.com`).
+1. Les fichiers `*.fr.json` et `*.en.json` sont hébergés ici sur GitHub.
+2. Le site front (`atlas-site`) les récupère en lecture seule (via `raw.githubusercontent.com`) selon la locale choisie.
 3. À chaque Pull Request mergée :
    - les données sont mises à jour
    - le site est automatiquement synchronisé
