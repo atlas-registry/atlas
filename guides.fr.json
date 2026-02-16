@@ -66,7 +66,7 @@
     "date": "2025-02-08"
   },
   {
-    "id": "pricing-strategy-builder",
+    "id": "pricing_strategy_builder",
     "title": "Construire une strategie de pricing produit",
     "description": "Le guide pour concevoir une grille tarifaire SaaS/produit qui maximise revenus et conversion.",
     "category": "business",
@@ -77,7 +77,7 @@
     "date": "2026-02-16"
   },
   {
-    "id": "competitor-radar",
+    "id": "competitor_radar",
     "title": "Cartographier ses concurrents methodiquement",
     "description": "Comment analyser la concurrence sans y passer des semaines, et en tirer des decisions strategiques.",
     "category": "business",
@@ -88,7 +88,7 @@
     "date": "2026-02-16"
   },
   {
-    "id": "business-model-stress-test",
+    "id": "business_model_stress_test",
     "title": "Stress-tester son business model",
     "description": "Comment soumettre ton modele economique a un crash test avant que le marche le fasse pour toi.",
     "category": "business",
@@ -99,7 +99,7 @@
     "date": "2026-02-16"
   },
   {
-    "id": "customer-persona-sculptor",
+    "id": "customer_persona_sculptor",
     "title": "Creer des personas clients qui servent vraiment",
     "description": "Le guide pour construire des personas basees sur des faits et des comportements, pas des cliches marketing.",
     "category": "business",
@@ -110,7 +110,7 @@
     "date": "2026-02-16"
   },
   {
-    "id": "pitch-deck-architect",
+    "id": "pitch_deck_architect",
     "title": "Structurer un pitch deck convaincant",
     "description": "Le guide slide par slide pour construire un pitch deck qui raconte une histoire et donne envie d'investir.",
     "category": "business",
@@ -121,7 +121,7 @@
     "date": "2026-02-16"
   },
   {
-    "id": "landing-page-copywriter",
+    "id": "landing_page_copywriter",
     "title": "Ecrire une landing page qui convertit",
     "description": "Le guide pour rediger le copy d'une landing page section par section, avec les principes de conversion qui marchent.",
     "category": "marketing",
@@ -132,7 +132,7 @@
     "date": "2026-02-16"
   },
   {
-    "id": "cold-outreach-crafter",
+    "id": "cold_outreach_crafter",
     "title": "Prospection a froid : obtenir des reponses",
     "description": "Le guide terrain pour ecrire des messages de prospection qui ne finissent pas a la corbeille.",
     "category": "growth",
@@ -143,7 +143,7 @@
     "date": "2026-02-16"
   },
   {
-    "id": "linkedin-post-generator",
+    "id": "linkedin_post_generator",
     "title": "Publier sur LinkedIn en 5 minutes",
     "description": "Le guide express pour transformer une idee en post LinkedIn publiable sans y passer une heure.",
     "category": "marketing",
@@ -154,7 +154,7 @@
     "date": "2026-02-16"
   },
   {
-    "id": "seo-content-brief-builder",
+    "id": "seo_content_brief_builder",
     "title": "Creer des briefs SEO qui rankent",
     "description": "Le guide pour structurer des briefs de contenu SEO complets et actionnables pour tes redacteurs ou pour toi-meme.",
     "category": "marketing",
@@ -165,7 +165,7 @@
     "date": "2026-02-16"
   },
   {
-    "id": "email-onboarding-sequence",
+    "id": "email_onboarding_sequence",
     "title": "Concevoir une sequence d'onboarding email",
     "description": "Le guide pour creer des emails d'onboarding qui activent tes utilisateurs et reduisent le churn.",
     "category": "marketing",
@@ -176,7 +176,7 @@
     "date": "2026-02-16"
   },
   {
-    "id": "sop-generator",
+    "id": "sop_generator",
     "title": "Documenter ses process avec des SOP",
     "description": "Le guide pour transformer tes process informels en procedures claires, delegables et ameliorables.",
     "category": "automation",
@@ -187,7 +187,7 @@
     "date": "2026-02-16"
   },
   {
-    "id": "meeting-to-actions",
+    "id": "meeting_to_actions",
     "title": "Transformer ses reunions en actions concretes",
     "description": "Le guide pour ne plus sortir de reunion en se demandant qui fait quoi.",
     "category": "productivity",
@@ -198,7 +198,7 @@
     "date": "2026-02-16"
   },
   {
-    "id": "delegation-framework",
+    "id": "delegation_framework",
     "title": "Apprendre a deleguer efficacement",
     "description": "Le guide pour arreter de tout faire soi-meme et construire un systeme de delegation qui fonctionne.",
     "category": "productivity",
@@ -209,7 +209,7 @@
     "date": "2026-02-16"
   },
   {
-    "id": "prd-writer",
+    "id": "prd_writer",
     "title": "Rediger un PRD clair et actionnable",
     "description": "Le guide pour ecrire des Product Requirements Documents qui eliminent l'ambiguite entre product et dev.",
     "category": "dev",
@@ -220,7 +220,7 @@
     "date": "2026-02-16"
   },
   {
-    "id": "unit-economics-calculator",
+    "id": "unit_economics_calculator",
     "title": "Comprendre et calculer ses unit economics",
     "description": "Le guide pour maitriser les metriques qui determinent si ton business est viable ou condamne.",
     "category": "business",
