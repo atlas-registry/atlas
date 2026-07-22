@@ -180,5 +180,13 @@
     "link": "https://docs.anthropic.com/en/docs/claude-code",
     "description": "AI assistant integrated into code and refactoring workflows.",
     "why": "Move faster without sacrificing readability or logic."
+  },
+  {
+    "id": "ai_router",
+    "name": "AI Router",
+    "category": "infra_pragmatique",
+    "link": "https://ai-router.dev",
+    "description": "OpenAI-compatible API relay for using ChatGPT / GPT in applications and development tools.",
+    "why": "Keep an OpenAI-compatible client format in a script or development tool while monitoring usage."
   }
 ]
