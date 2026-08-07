@@ -132,6 +132,14 @@
     "why": "Explain a product or idea without hiding behind slides."
   },
   {
+    "id": "livefaceswap_ai",
+    "name": "LiveFaceSwap AI",
+    "category": "creer_montrer",
+    "link": "https://livefaceswap.ai/",
+    "description": "Real-time face swapping, outfit changes, and visual restyling on the web and Windows.",
+    "why": "Transform a live camera feed in OBS or another compatible app through a virtual camera."
+  },
+  {
     "id": "elevenlabs",
     "name": "ElevenLabs",
     "category": "creer_montrer",
