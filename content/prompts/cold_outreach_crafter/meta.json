@@ -1,0 +1,20 @@
+{
+  "id": "cold_outreach_crafter",
+  "category": "growth",
+  "difficulty": "intermediate",
+  "order": 24,
+  "labels": [
+    "outreach",
+    "sales"
+  ],
+  "variables": [
+    {
+      "name": "OUTREACH_BRIEF",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

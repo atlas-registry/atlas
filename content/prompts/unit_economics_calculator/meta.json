@@ -1,0 +1,19 @@
+{
+  "id": "unit_economics_calculator",
+  "category": "business",
+  "difficulty": "advanced",
+  "order": 32,
+  "labels": [
+    "unit-economics"
+  ],
+  "variables": [
+    {
+      "name": "BUSINESS_METRICS",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

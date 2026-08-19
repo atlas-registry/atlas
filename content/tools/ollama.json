@@ -1,0 +1,15 @@
+{
+  "id": "ollama",
+  "category": "infra_pragmatique",
+  "link": "https://ollama.com",
+  "order": 20,
+  "name": "Ollama",
+  "description": {
+    "fr": "Exécution de modèles LLM en local.",
+    "en": "Run LLM models locally."
+  },
+  "why": {
+    "fr": "Garder le contrôle et expérimenter sans dépendre du cloud.",
+    "en": "Keep control and experiment without depending on the cloud."
+  }
+}

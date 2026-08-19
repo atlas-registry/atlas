@@ -1,0 +1,15 @@
+{
+  "id": "google_gemini",
+  "category": "penser_decider",
+  "link": "https://deepmind.google/technologies/gemini",
+  "order": 2,
+  "name": "Google Gemini",
+  "description": {
+    "fr": "Modèles multimodaux intégrés à l’écosystème Google.",
+    "en": "Multimodal models integrated into the Google ecosystem."
+  },
+  "why": {
+    "fr": "Utile pour croiser des points de vue et confronter une idée sous un autre angle.",
+    "en": "Useful for cross-referencing perspectives and challenging an idea from a different angle."
+  }
+}

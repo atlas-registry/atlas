@@ -1,0 +1,21 @@
+{
+  "id": "linkedin_post_generator",
+  "category": "marketing",
+  "difficulty": "beginner",
+  "order": 25,
+  "labels": [
+    "content",
+    "productivity",
+    "social-media"
+  ],
+  "variables": [
+    {
+      "name": "POST_IDEA",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

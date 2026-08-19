@@ -1,0 +1,15 @@
+{
+  "id": "anthropic",
+  "category": "penser_decider",
+  "link": "https://www.anthropic.com",
+  "order": 1,
+  "name": "Claude (Anthropic)",
+  "description": {
+    "fr": "Modèles orientés raisonnement long, analyse et écriture structurée.",
+    "en": "Models focused on long-form reasoning, analysis, and structured writing."
+  },
+  "why": {
+    "fr": "Pour aller au fond d’un sujet ou prendre une décision complexe sans biais.",
+    "en": "To dig deep into a topic or make a complex decision without bias."
+  }
+}

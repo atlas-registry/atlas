@@ -1,0 +1,11 @@
+{
+  "id": "zone_de_genie",
+  "category": "introspection",
+  "difficulty": "beginner",
+  "order": 12,
+  "labels": [
+    "differentiation",
+    "purpose"
+  ],
+  "variables": []
+}

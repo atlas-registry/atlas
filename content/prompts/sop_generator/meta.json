@@ -1,0 +1,20 @@
+{
+  "id": "sop_generator",
+  "category": "automation",
+  "difficulty": "intermediate",
+  "order": 28,
+  "labels": [
+    "delegation",
+    "process"
+  ],
+  "variables": [
+    {
+      "name": "PROCESS",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

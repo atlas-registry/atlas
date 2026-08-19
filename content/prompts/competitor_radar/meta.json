@@ -1,0 +1,21 @@
+{
+  "id": "competitor_radar",
+  "category": "business",
+  "difficulty": "intermediate",
+  "order": 19,
+  "labels": [
+    "competition",
+    "market-research",
+    "positioning"
+  ],
+  "variables": [
+    {
+      "name": "COMPETITORS",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

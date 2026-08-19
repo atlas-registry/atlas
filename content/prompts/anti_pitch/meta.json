@@ -1,0 +1,22 @@
+{
+  "id": "anti_pitch",
+  "category": "business",
+  "difficulty": "intermediate",
+  "order": 11,
+  "labels": [
+    "decision-making",
+    "fundraising",
+    "pitch",
+    "validation"
+  ],
+  "variables": [
+    {
+      "name": "PROJECT",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

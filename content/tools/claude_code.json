@@ -1,0 +1,15 @@
+{
+  "id": "claude_code",
+  "category": "infra_pragmatique",
+  "link": "https://docs.anthropic.com/en/docs/claude-code",
+  "order": 21,
+  "name": "Claude Code",
+  "description": {
+    "fr": "Assistant IA intégré au code et au refactoring.",
+    "en": "AI assistant integrated into code and refactoring workflows."
+  },
+  "why": {
+    "fr": "Aller plus vite sans sacrifier la lisibilité ni la logique.",
+    "en": "Move faster without sacrificing readability or logic."
+  }
+}

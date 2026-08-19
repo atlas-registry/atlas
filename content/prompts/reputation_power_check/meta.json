@@ -1,0 +1,21 @@
+{
+  "id": "reputation_power_check",
+  "category": "growth",
+  "difficulty": "beginner",
+  "order": 4,
+  "labels": [
+    "clarity",
+    "personal-branding",
+    "positioning"
+  ],
+  "variables": [
+    {
+      "name": "CONTENT",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

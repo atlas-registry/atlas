@@ -1,41 +1,36 @@
-name: Lint JSON
+name: Registre
 
 on:
   pull_request:
-    paths:
-      - "**/*.json"
   push:
-    branches:
-      - main
-    paths:
-      - "**/*.json"
+    branches: [main]
+
+concurrency:
+  group: registre-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  lint-json:
+  validate:
     runs-on: ubuntu-24.04
+    timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@v4
-      - name: Validate JSON
-        run: |
-          git ls-files '*.json' | while read -r f; do
-            echo "Checking: $f"
-            jq empty "$f" || { echo "Invalid JSON in $f"; exit 1; }
-          done
+      - uses: actions/checkout@v5
 
-  sync-ids:
-    runs-on: ubuntu-24.04
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 20
 
-    steps:
-      - uses: actions/checkout@v4
-      - name: Verify FR/EN ID sync
+      - run: npm ci
+
+      # Schémas, vocabulaire contrôlé, et surtout parité stricte des variables
+      # entre les deux locales : c'est ce contrôle qui empêche un formulaire de
+      # différer selon la langue.
+      - name: Valider la source
+        run: npm run validate
+
+      # Les artefacts servis au site doivent refléter la source à l'octet près.
+      - name: Vérifier les artefacts générés
         run: |
-          error=0
-          for base in tools prompts guides; do
-            echo "Checking $base FR/EN ID sync..."
-            diff <(jq '[.. | objects | .id // empty]' "$base.fr.json") <(jq '[.. | objects | .id // empty]' "$base.en.json") || {
-              echo "ID mismatch in $base.fr.json vs $base.en.json"
-              error=1
-            }
-          done
-          exit $error
+          npm run build
+          node scripts/check-artifacts.mjs

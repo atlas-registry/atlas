@@ -1,0 +1,15 @@
+{
+  "id": "openai",
+  "category": "penser_decider",
+  "link": "https://openai.com",
+  "order": 0,
+  "name": "OpenAI",
+  "description": {
+    "fr": "Modèles GPT pour raisonner, écrire, structurer et explorer rapidement.",
+    "en": "GPT models for reasoning, writing, structuring, and exploring ideas quickly."
+  },
+  "why": {
+    "fr": "Quand tu veux clarifier une idée ou tester un raisonnement sans tourner en rond.",
+    "en": "When you want to clarify an idea or test a line of reasoning without going in circles."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "business_fragility_check",
+  "category": "business",
+  "difficulty": "intermediate",
+  "order": 5,
+  "labels": [
+    "business-model",
+    "positioning",
+    "risk"
+  ],
+  "variables": [
+    {
+      "name": "BUSINESS",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

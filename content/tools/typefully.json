@@ -1,0 +1,15 @@
+{
+  "id": "typefully",
+  "category": "diffuser",
+  "link": "https://typefully.com",
+  "order": 17,
+  "name": "Typefully",
+  "description": {
+    "fr": "Planification et écriture de contenus pour X / LinkedIn.",
+    "en": "Content planning and writing for X / LinkedIn."
+  },
+  "why": {
+    "fr": "Partager régulièrement sans y consacrer trop de charge mentale.",
+    "en": "Share regularly without spending too much mental energy on it."
+  }
+}

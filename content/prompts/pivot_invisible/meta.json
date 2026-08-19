@@ -1,0 +1,20 @@
+{
+  "id": "pivot_invisible",
+  "category": "introspection",
+  "difficulty": "beginner",
+  "order": 13,
+  "labels": [
+    "clarity",
+    "decision-making"
+  ],
+  "variables": [
+    {
+      "name": "SITUATION",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

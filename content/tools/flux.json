@@ -1,0 +1,15 @@
+{
+  "id": "flux",
+  "category": "creer_montrer",
+  "link": "https://blackforestlabs.ai",
+  "order": 13,
+  "name": "Flux (Black Forest Labs)",
+  "description": {
+    "fr": "Modèles de génération d’images performants et flexibles.",
+    "en": "High-performing and flexible image generation models."
+  },
+  "why": {
+    "fr": "Créer des visuels propres et exploitables en production.",
+    "en": "Create clean, production-ready visuals."
+  }
+}

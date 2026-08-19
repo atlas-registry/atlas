@@ -1,0 +1,21 @@
+{
+  "id": "linkedin_post_forge",
+  "category": "growth",
+  "difficulty": "intermediate",
+  "order": 16,
+  "labels": [
+    "copywriting",
+    "growth",
+    "social-media"
+  ],
+  "variables": [
+    {
+      "name": "POST_IDEA",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

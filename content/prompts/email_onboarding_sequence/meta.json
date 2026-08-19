@@ -1,0 +1,21 @@
+{
+  "id": "email_onboarding_sequence",
+  "category": "marketing",
+  "difficulty": "intermediate",
+  "order": 27,
+  "labels": [
+    "email",
+    "onboarding",
+    "retention"
+  ],
+  "variables": [
+    {
+      "name": "ONBOARDING_CONTEXT",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}
