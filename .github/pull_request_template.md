@@ -1,37 +1,46 @@
-### Type de contribution
+### Before you start
 
-- [ ] Nouvel outil
-- [ ] Nouveau prompt
-- [ ] Correction / amélioration
+- [ ] I have read the [editorial scope](../blob/main/CONTRIBUTING.md#editorial-scope) and this contribution falls within it
+- [ ] I edited files under `content/`, **not** the generated JSON at the repository root
+- [ ] `npm run check` passes locally (validation, build, artifact drift)
+
+> The JSON files at the root are build artifacts. A pull request that edits them directly fails CI
+> and would be overwritten on the next build.
 
 ---
 
-### Détails
+### Type
 
-**Nom :**
-**Lien (si outil) :**
-**Catégorie :**
+- [ ] Cartographie (guided interview)
+- [ ] Prompt
+- [ ] Guide
+- [ ] Fix or improvement to existing content
+- [ ] Tooling / documentation
 
-**Fichier(s) modifié(s) :**
+---
 
-- [ ] `tools.fr.json` / `tools.en.json`
-- [ ] `prompts.fr.json` / `prompts.en.json`
-- [ ] `guides.fr.json` / `guides.en.json`
+### What this adds
 
-**Pourquoi ça mérite sa place dans l’Atlas ?**
-_(contexte d’usage, cas concrets, ce que ça apporte)_
+**Name:**
+
+**Category:**
+
+**What does it bring that the registry does not already have?**
+_Be specific. "Another prompt about pricing" is not an answer if three already exist._
 
 ---
 
 ### Checklist
 
-- [ ] JSON valide (pas de virgule en trop, structure respectée)
-- [ ] Contenu ajouté dans les deux locales (FR et EN) avec les mêmes IDs
-- [ ] Catégorie existante ou nouvelle catégorie justifiée
-- [ ] J'utilise vraiment cet outil / ce prompt ou je le recommande sincèrement
-- [ ] Pas de lien affilié / promo déguisée
-- [ ] Pas d'emoji dans les fichiers JSON
+- [ ] Both locales provided (`fr` and `en`) with identical identifiers
+- [ ] Categories and labels taken from the existing vocabulary, or a new one added and justified in this PR
+- [ ] Regenerated artifacts committed (`npm run build`)
+- [ ] I genuinely use this, or I sincerely recommend it
+- [ ] No affiliate link, no disguised promotion
 
 ---
 
-Merci pour ta contribution 🙌
+### Disclosure
+
+_If you are connected to the product or service being submitted, say so here. It is allowed, and
+declaring it costs you nothing — omitting it costs you the pull request._

@@ -1,93 +1,87 @@
-# Contribuer à Atlas
+# Contributing to Atlas
 
-Le but est de garder un registre utile et réellement utilisé, pas un annuaire géant.
-Une entrée qui n'apporte rien de neuf sera refusée, même bien écrite.
+The goal is a registry that is useful and actually used, not an endless directory.
+An entry that adds nothing new will be declined, however well written.
 
-## Périmètre éditorial
+## Editorial scope
 
-Lisez cette section avant d'ouvrir une PR : elle vous évitera d'écrire pour rien.
+Read this section before opening a pull request. It will save you from writing for nothing.
 
-**Atlas s'adresse aux fondateurs et solopreneurs francophones**, sur deux
-terrains liés : se comprendre soi (introspection, positionnement, énergie) et
-faire avancer son activité (validation, pricing, distribution).
+**Atlas is for French-speaking founders and solo operators**, across two connected areas:
+understanding yourself (introspection, positioning, energy) and moving your business forward
+(validation, pricing, distribution).
 
-### Ce qui est ouvert aux contributions
+### Open to contributions
 
-- **Les Cartographies** — les entretiens conduits. C'est le cœur du produit et
-  c'est là qu'une contribution a le plus de valeur.
-- **Les prompts** — toujours acceptés s'ils apportent quelque chose que le
-  registre n'a pas.
-- **Les guides.**
+- **Cartographies** — the guided interviews. This is the core of the product and where a
+  contribution carries the most value.
+- **Prompts** — always welcome when they bring something the registry does not already have.
+- **Guides.**
 
-### Ce qui ne l'est pas
+### Not open
 
-- **Le catalogue d'outils est gelé.** Aucun nouvel outil n'est accepté. Ce n'est
-  pas un jugement sur les produits proposés : le catalogue génère une
-  maintenance récurrente pour un usage quasi nul, et Atlas se recentre sur les
-  entretiens. Les entrées existantes restent servies, elles ne sont plus
-  enrichies.
-- **Tout ce qui sort du travail d'un fondateur** : divertissement, création
-  visuelle grand public, outils de niche technique sans lien avec la promesse.
-- **Tout outil dont l'usage principal est de tromper quelqu'un** — se faire
-  passer pour une autre personne, fabriquer un document ou une image présentés
-  comme authentiques, contourner une vérification d'identité. Indépendamment des
-  intentions de l'éditeur, référencer ces outils engage le nom d'Atlas.
+- **The tools catalogue is frozen.** No new tool is accepted. This is not a judgement on the
+  products submitted: the catalogue creates recurring maintenance for almost no usage, and Atlas
+  is refocusing on interviews. Existing entries are still served, they are no longer extended.
+- **Anything outside a founder's work** — entertainment, consumer visual creation, narrow
+  technical tools with no link to the promise.
+- **Any tool whose primary use is to deceive someone** — impersonating another person,
+  fabricating a document or an image presented as authentic, defeating an identity check.
+  Whatever the publisher's intent, listing these commits the Atlas name.
 
-### Proposer son propre produit
+### Submitting your own product
 
-C'est autorisé, à deux conditions : **le déclarer explicitement dans la PR**, et
-accepter d'être jugé sur le même critère que le reste — est-ce que ça apporte
-quelque chose que le registre n'a pas déjà. Une contribution honnête et bien
-faite peut être refusée pour des raisons de périmètre, sans que ce soit un
-reproche.
+This is allowed, on two conditions: **disclose it explicitly in the pull request**, and accept
+being judged by the same criterion as everything else — does it bring something the registry does
+not already have. An honest, well-made contribution can still be declined on scope. That is not a
+reproach.
 
-## Prérequis
+## Requirements
 
 ```bash
 npm install
 ```
 
-Node 20 ou plus.
+Node 20 or later.
 
-## Où vit le contenu
+## Where the content lives
 
-La source de vérité est le dossier `content/`. Les fichiers JSON à la racine
-(`prompts.fr.json`, `tools.en.json`…) sont **générés** : ne les modifiez jamais à
-la main, ils seraient écrasés au prochain build.
+The source of truth is the `content/` directory. The JSON files at the repository root
+(`prompts.fr.json`, `tools.en.json`, …) are **generated**: never edit them by hand, they would be
+overwritten on the next build.
 
 ```
 content/
-  prompts/<id>/
-    meta.json   structure : catégorie, difficulté, labels, variables
-    fr.md       textes français  (frontmatter) + corps du prompt
-    en.md       textes anglais   (frontmatter) + corps du prompt
   cartographies/<id>/
-    meta.json           structure : catégorie, labels, axes, bornes de tours
-    entretien.fr.md     gabarit de conduite + textes de présentation
+    meta.json           structure: category, labels, axes, turn bounds
+    entretien.fr.md     interview template + presentation strings
     entretien.en.md
-    carte.fr.md         consignes de la Carte
+    carte.fr.md         instructions for the Card
     carte.en.md
-    dossier.fr.md       consignes du Dossier
+    dossier.fr.md       instructions for the Report
     dossier.en.md
+  prompts/<id>/
+    meta.json           structure: category, difficulty, labels, variables
+    fr.md               French strings (frontmatter) + prompt body
+    en.md               English strings (frontmatter) + prompt body
   guides/<slug>/
     meta.json, fr.md, en.md
-  tools/<id>.json       gelé, voir « Périmètre éditorial »
+  tools/<id>.json       frozen, see "Editorial scope"
 ```
 
-Cette séparation est délibérée : ce qui est structurel n'existe qu'une fois et ne
-peut donc pas diverger d'une langue à l'autre, tandis que ce qui est rédigé
-existe dans les deux langues.
+This separation is deliberate: what is structural exists once and therefore cannot diverge between
+languages, while what is written exists in both.
 
-## Ajouter un prompt
+## Adding a prompt
 
-1. Créez `content/prompts/<id>/` — l'identifiant est en minuscules, mots séparés
-   par `_` ou `-`, et doit correspondre au nom du dossier.
+1. Create `content/prompts/<id>/` — the identifier is lowercase, words separated by `_` or `-`,
+   and must match the directory name.
 
-2. `meta.json` :
+2. `meta.json`:
 
 ```json
 {
-  "id": "mon_prompt",
+  "id": "my_prompt",
   "category": "business",
   "difficulty": "intermediate",
   "order": 33,
@@ -99,24 +93,24 @@ existe dans les deux langues.
 }
 ```
 
-- `category` et `labels` puisent dans le vocabulaire de `scripts/taxonomy.mjs`.
-  Aucun terme libre n'est accepté : si un label manque, ajoutez-le à la taxonomie
-  dans la même PR, en expliquant pourquoi les existants ne suffisent pas.
-- `variables` puise dans `scripts/variables.mjs`. Une variable absente de cette
-  table doit y être ajoutée avec ses libellés et exemples dans les deux langues.
-- `order` positionne le prompt dans les listes du site.
+- `category` and `labels` draw from the vocabulary in `scripts/taxonomy.mjs`. No free-form terms
+  are accepted: if a label is missing, add it to the taxonomy in the same pull request and explain
+  why the existing ones do not fit.
+- `variables` draws from `scripts/variables.mjs`. A variable absent from that table must be added
+  there with its labels and examples in both languages.
+- `order` positions the prompt in the site's listings.
 
-3. `fr.md` et `en.md` :
+3. `fr.md` and `en.md`:
 
 ```markdown
 ---
-name: Nom du prompt
-hook: Une phrase qui dit le bénéfice
-description: Ce que fait le prompt.
-gains: Ce que la personne obtient concrètement.
-example_input: "{{BUSINESS}}: une agence de design de 6 personnes"
+name: Prompt name
+hook: One sentence stating the benefit
+description: What the prompt does.
+gains: What the reader concretely walks away with.
+example_input: "{{BUSINESS}}: a six-person design agency"
 example_output: |-
-  Le résultat attendu, abrégé.
+  The expected result, abbreviated.
 ---
 
 ROLE:
@@ -142,20 +136,23 @@ RULES:
 {{USERDATA}}
 ```
 
-## Ajouter une Cartographie
+That six-section shape is the convention for new prompts. It keeps them readable and easy to wire
+into an agent or a workflow.
 
-Une Cartographie n'est pas un prompt. Un prompt est un gabarit à trou, rempli en
-une fois. Une Cartographie est un **entretien conduit sur plusieurs tours**, qui
-produit deux artefacts : une Carte partageable, puis un Dossier développé.
+## Adding a Cartographie
 
-D'où trois documents par langue, parce que ce sont trois appels distincts au
-modèle : conduire l'entretien, rendre la Carte, développer le Dossier.
+A Cartographie is not a prompt. A prompt is a template with holes, filled in once. A Cartographie
+is an **interview conducted over several turns**, producing two artifacts: a shareable Card, then
+a developed Report.
 
-1. `meta.json` :
+Hence three documents per language, because those are three distinct model calls: conduct the
+interview, render the Card, write the Report.
+
+1. `meta.json`:
 
 ```json
 {
-  "id": "ma_cartographie",
+  "id": "my_cartographie",
   "category": "introspection",
   "difficulty": "beginner",
   "order": 1,
@@ -165,77 +162,79 @@ modèle : conduire l'entretien, rendre la Carte, développer le Dossier.
 }
 ```
 
-- `tours` borne l'entretien. Le plafond borne le coût par construction, le
-  plancher empêche une conclusion prématurée.
-- `axes` est la structure de la carte. Les identifiants sont déclarés **une
-  seule fois ici** ; seuls leurs libellés sont traduits, dans le frontmatter de
-  chaque `entretien.<langue>.md`. Sans ça, une carte changerait de forme selon
-  la langue.
+- `tours` bounds the interview. The ceiling bounds cost by construction; the floor prevents a
+  premature conclusion.
+- `axes` is the structure of the card. The identifiers are declared **here only**; only their
+  display labels are translated, in the frontmatter of each `entretien.<locale>.md`. Without this,
+  a card would change shape depending on the language.
 
-2. `entretien.fr.md` et `entretien.en.md` :
+2. `entretien.fr.md` and `entretien.en.md`:
 
 ```markdown
 ---
-name: Nom de la Cartographie
-hook: Une phrase qui dit le bénéfice
+name: Name of the Cartographie
+hook: One sentence stating the benefit
 promesse: >-
-  Ce que la personne va savoir, ce qu'elle pourra faire, le temps que ça
-  coûte, et la tension qu'elle pressent déjà.
-description: Ce que fait la Cartographie.
+  What the person will learn, what they will be able to do, what it costs them
+  in time, and the tension they already suspect.
+description: What the Cartographie does.
 axes:
   passion: Passion
   talent: Talent
 ---
 
-Le gabarit de conduite : ce que le modèle cherche, comment il mène chaque
-tour, ses règles, son calibrage, et quand il s'arrête.
+The interview template: what the model is looking for, how it runs each turn,
+its rules, its calibration, and when it stops.
 ```
 
-La **promesse** est le point de conversion : un entretien coûte vingt minutes à
-la personne, elle ne les investit pas sans savoir ce qu'elle obtient. Une
-promesse creuse ne se rattrape pas par un bon entretien, puisque l'entretien
-n'aura pas lieu. La CI impose une longueur minimale pour cette raison.
+The **promise** is the conversion point: an interview costs the reader twenty minutes, and nobody
+invests that without knowing what they get. A hollow promise is not rescued by a good interview,
+because the interview will not happen. The CI enforces a minimum length for that reason.
 
-3. `carte.fr.md`, `carte.en.md`, `dossier.fr.md`, `dossier.en.md` : les consignes
-   de synthèse, avec un frontmatter réduit à `titre`.
+3. `carte.fr.md`, `carte.en.md`, `dossier.fr.md`, `dossier.en.md`: the synthesis instructions,
+   with a frontmatter reduced to `titre`.
 
-### Jetons d'exécution
+### Runtime tokens
 
-Le gabarit d'entretien reçoit des valeurs injectées à chaque tour. Le vocabulaire
-est **fermé**, comme celui des variables, et pour la même raison : un jeton mal
-orthographié serait lu comme une consigne par le modèle, et l'entretien
-dériverait sans que rien ne le signale.
+The interview template receives values injected on every turn. The vocabulary is **closed**, like
+the one for variables, and for the same reason: a misspelled token would be read as an instruction
+by the model, and the interview would drift with nothing to signal it.
 
-| Jeton | Rôle | Obligatoire |
+| Token | Role | Required |
 | --- | --- | --- |
-| `{{TOURS_MAX}}` | Plafond de tours | oui |
-| `{{TOUR_COURANT}}` | Tour en cours | oui |
-| `{{CARTE_PRECEDENTE}}` | État de la carte au tour précédent | oui |
-| `{{TOURS_MIN}}` | Plancher avant conclusion | non |
+| `{{TOURS_MAX}}` | Turn ceiling | yes |
+| `{{TOUR_COURANT}}` | Current turn | yes |
+| `{{CARTE_PRECEDENTE}}` | Card state at the previous turn | yes |
+| `{{TOURS_MIN}}` | Floor before concluding | no |
 
-Les trois premiers sont exigés dans chaque gabarit : sans eux, l'entretien n'a ni
-borne ni mémoire.
+The first three are required in every template: without them an interview has neither bounds nor
+memory.
 
-## Règles sur les variables
+## Rules on variables
 
-- `{{…}}` est **strictement réservé aux saisies de l'utilisateur**. Pour montrer
-  un champ à personnaliser dans un exemple de sortie, utilisez des crochets :
-  `[Prénom]`, `[Entreprise]`.
-- Les deux langues doivent utiliser **exactement les mêmes variables**. C'est
-  vérifié par la CI, parce que le site en génère un formulaire : des variables
-  différentes produiraient deux formulaires différents selon la langue.
-- `{{USERDATA}}` termine tout prompt qui attend une saisie.
+- `{{…}}` is **strictly reserved for user input**. To show a field to personalise inside an example
+  output, use square brackets: `[FirstName]`, `[Company]`.
+- Both languages must use **exactly the same variables**. The CI checks this, because the site
+  generates a form from them: different variables would produce different forms depending on the
+  language.
+- `{{USERDATA}}` closes every prompt that expects input.
 
-## Avant d'ouvrir la PR
+## Before opening a pull request
 
 ```bash
-npm run validate   # schémas, vocabulaire, parité des locales
-npm run build      # régénère les artefacts JSON
+npm run validate   # schemas, vocabulary, locale parity
+npm run build      # regenerate the JSON artifacts
 ```
 
-Committez les artefacts régénérés : la CI vérifie qu'ils correspondent à la source.
+Commit the regenerated artifacts: the CI verifies that they match the source.
 
-## Convention de commit
+## Commit convention
 
-Commits conventionnels, lus par `git-cliff` :
+Conventional commits, read by `git-cliff`:
 `feat:` `fix:` `doc:` `perf:` `refactor:` `chore:`
+
+## A note on language
+
+The registry's public documentation is in English so that anyone can contribute. **The content
+itself is bilingual**: every resource must be provided in French and in English. French is the
+project's primary audience, and the French wording is the one that gets the editorial attention.
