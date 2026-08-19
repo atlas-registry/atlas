@@ -1,0 +1,15 @@
+{
+  "id": "gumloop",
+  "category": "automatiser",
+  "link": "https://www.gumloop.com",
+  "order": 9,
+  "name": "Gumloop",
+  "description": {
+    "fr": "Automatisation assistée par IA orientée productivité.",
+    "en": "AI-assisted automation focused on productivity."
+  },
+  "why": {
+    "fr": "Tester rapidement des automatisations quand la vitesse prime.",
+    "en": "Quickly test automations when speed is the priority."
+  }
+}

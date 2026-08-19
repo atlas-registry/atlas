@@ -1,0 +1,20 @@
+{
+  "id": "pricing_strategy_builder",
+  "category": "business",
+  "difficulty": "advanced",
+  "order": 18,
+  "labels": [
+    "business-model",
+    "pricing"
+  ],
+  "variables": [
+    {
+      "name": "PRODUCT_PRICING",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

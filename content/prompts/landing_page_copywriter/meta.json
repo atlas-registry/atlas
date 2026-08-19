@@ -1,0 +1,20 @@
+{
+  "id": "landing_page_copywriter",
+  "category": "marketing",
+  "difficulty": "intermediate",
+  "order": 23,
+  "labels": [
+    "conversion",
+    "copywriting"
+  ],
+  "variables": [
+    {
+      "name": "LANDING_BRIEF",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

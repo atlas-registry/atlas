@@ -1,0 +1,21 @@
+{
+  "id": "automation_time_saver_extractor",
+  "category": "automation",
+  "difficulty": "beginner",
+  "order": 1,
+  "labels": [
+    "automation",
+    "energy",
+    "process"
+  ],
+  "variables": [
+    {
+      "name": "TASK_LIST",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

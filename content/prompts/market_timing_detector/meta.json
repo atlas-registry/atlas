@@ -1,0 +1,21 @@
+{
+  "id": "market_timing_detector",
+  "category": "business",
+  "difficulty": "intermediate",
+  "order": 8,
+  "labels": [
+    "market-research",
+    "positioning",
+    "validation"
+  ],
+  "variables": [
+    {
+      "name": "IDEA",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

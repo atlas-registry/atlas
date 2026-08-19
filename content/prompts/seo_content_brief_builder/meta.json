@@ -1,0 +1,21 @@
+{
+  "id": "seo_content_brief_builder",
+  "category": "marketing",
+  "difficulty": "intermediate",
+  "order": 26,
+  "labels": [
+    "content",
+    "positioning",
+    "seo"
+  ],
+  "variables": [
+    {
+      "name": "KEYWORD",
+      "type": "text"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

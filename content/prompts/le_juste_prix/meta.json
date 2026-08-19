@@ -1,0 +1,20 @@
+{
+  "id": "le_juste_prix",
+  "category": "business",
+  "difficulty": "intermediate",
+  "order": 17,
+  "labels": [
+    "positioning",
+    "pricing"
+  ],
+  "variables": [
+    {
+      "name": "CURRENT_PRICING",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

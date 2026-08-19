@@ -1,0 +1,15 @@
+{
+  "id": "v0",
+  "category": "construire_vite",
+  "link": "https://v0.dev",
+  "order": 4,
+  "name": "v0",
+  "description": {
+    "fr": "Génération d’UI React/Tailwind à partir de prompts.",
+    "en": "React/Tailwind UI generation from prompts."
+  },
+  "why": {
+    "fr": "Passer d’une idée à une interface concrète en quelques minutes.",
+    "en": "Go from an idea to a concrete interface in just a few minutes."
+  }
+}

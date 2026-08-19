@@ -1,0 +1,15 @@
+{
+  "id": "bolt",
+  "category": "construire_vite",
+  "link": "https://bolt.new",
+  "order": 6,
+  "name": "Bolt.new",
+  "description": {
+    "fr": "Environnement de prototypage rapide front/back dans le navigateur.",
+    "en": "Rapid front/back prototyping environment in the browser."
+  },
+  "why": {
+    "fr": "Tester une idée technique sans installer ni configurer quoi que ce soit.",
+    "en": "Test a technical idea without installing or configuring anything."
+  }
+}

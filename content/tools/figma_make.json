@@ -1,0 +1,15 @@
+{
+  "id": "figma_make",
+  "category": "construire_vite",
+  "link": "https://www.figma.com",
+  "order": 7,
+  "name": "Figma Make",
+  "description": {
+    "fr": "Création et itération rapide de design via IA dans Figma.",
+    "en": "Fast design creation and iteration via AI in Figma."
+  },
+  "why": {
+    "fr": "Explorer des pistes visuelles sans rester bloqué sur la page blanche.",
+    "en": "Explore visual directions without getting stuck on a blank page."
+  }
+}

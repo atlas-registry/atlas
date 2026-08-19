@@ -1,0 +1,15 @@
+{
+  "id": "lovable",
+  "category": "construire_vite",
+  "link": "https://lovable.dev",
+  "order": 5,
+  "name": "Lovable",
+  "description": {
+    "fr": "Générateur d’apps full-stack assisté par IA.",
+    "en": "AI-assisted full-stack app generator."
+  },
+  "why": {
+    "fr": "Prototyper un produit complet sans sur-architecturer trop tôt.",
+    "en": "Prototype a complete product without over-architecting too early."
+  }
+}

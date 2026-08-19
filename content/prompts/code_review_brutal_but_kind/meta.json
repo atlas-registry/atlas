@@ -1,0 +1,19 @@
+{
+  "id": "code_review_brutal_but_kind",
+  "category": "dev",
+  "difficulty": "intermediate",
+  "order": 2,
+  "labels": [
+    "engineering"
+  ],
+  "variables": [
+    {
+      "name": "CODE",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

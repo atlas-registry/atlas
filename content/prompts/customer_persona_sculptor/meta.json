@@ -1,0 +1,19 @@
+{
+  "id": "customer_persona_sculptor",
+  "category": "business",
+  "difficulty": "intermediate",
+  "order": 21,
+  "labels": [
+    "persona"
+  ],
+  "variables": [
+    {
+      "name": "CUSTOMERS",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

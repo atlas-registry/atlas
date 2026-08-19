@@ -1,0 +1,20 @@
+{
+  "id": "moat_extractor",
+  "category": "business",
+  "difficulty": "intermediate",
+  "order": 9,
+  "labels": [
+    "differentiation",
+    "positioning"
+  ],
+  "variables": [
+    {
+      "name": "BUSINESS",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

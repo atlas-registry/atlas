@@ -1,0 +1,15 @@
+{
+  "id": "heygen",
+  "category": "creer_montrer",
+  "link": "https://www.heygen.com",
+  "order": 15,
+  "name": "HeyGen",
+  "description": {
+    "fr": "Création de vidéos avec avatars IA.",
+    "en": "Video creation with AI avatars."
+  },
+  "why": {
+    "fr": "Expliquer un produit ou une idée sans se cacher derrière des slides.",
+    "en": "Explain a product or idea without hiding behind slides."
+  }
+}

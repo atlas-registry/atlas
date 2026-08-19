@@ -1,0 +1,15 @@
+{
+  "id": "buffer",
+  "category": "diffuser",
+  "link": "https://buffer.com",
+  "order": 18,
+  "name": "Buffer",
+  "description": {
+    "fr": "Planification simple de contenus multi-plateformes.",
+    "en": "Simple multi-platform content scheduling."
+  },
+  "why": {
+    "fr": "Programmer à l’avance pour rester constant sans friction.",
+    "en": "Schedule ahead to stay consistent without friction."
+  }
+}

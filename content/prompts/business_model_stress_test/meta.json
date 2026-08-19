@@ -1,0 +1,21 @@
+{
+  "id": "business_model_stress_test",
+  "category": "business",
+  "difficulty": "advanced",
+  "order": 20,
+  "labels": [
+    "business-model",
+    "risk",
+    "unit-economics"
+  ],
+  "variables": [
+    {
+      "name": "BUSINESS_MODEL",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "leonardo",
+  "category": "creer_montrer",
+  "link": "https://leonardo.ai",
+  "order": 14,
+  "name": "Leonardo AI",
+  "description": {
+    "fr": "Génération d’assets visuels orientés production.",
+    "en": "Production-oriented visual asset generation."
+  },
+  "why": {
+    "fr": "Produire rapidement des visuels cohérents sans designer dédié.",
+    "en": "Quickly produce consistent visuals without a dedicated designer."
+  }
+}

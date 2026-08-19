@@ -1,0 +1,15 @@
+{
+  "id": "midjourney",
+  "category": "creer_montrer",
+  "link": "https://www.midjourney.com",
+  "order": 12,
+  "name": "Midjourney",
+  "description": {
+    "fr": "Génération d’images artistiques haut de gamme.",
+    "en": "High-end artistic image generation."
+  },
+  "why": {
+    "fr": "Donner une identité forte à une idée dès le départ.",
+    "en": "Give a strong identity to an idea right from the start."
+  }
+}

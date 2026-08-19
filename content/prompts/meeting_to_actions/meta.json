@@ -1,0 +1,21 @@
+{
+  "id": "meeting_to_actions",
+  "category": "productivity",
+  "difficulty": "beginner",
+  "order": 29,
+  "labels": [
+    "decision-making",
+    "process",
+    "productivity"
+  ],
+  "variables": [
+    {
+      "name": "MEETING_NOTES",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "prd_writer",
+  "category": "dev",
+  "difficulty": "intermediate",
+  "order": 31,
+  "labels": [
+    "product"
+  ],
+  "variables": [
+    {
+      "name": "FEATURE",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "delegation_framework",
+  "category": "productivity",
+  "difficulty": "intermediate",
+  "order": 30,
+  "labels": [
+    "delegation",
+    "leadership",
+    "productivity"
+  ],
+  "variables": [
+    {
+      "name": "TASKS_TO_DELEGATE",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

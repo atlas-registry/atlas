@@ -1,0 +1,15 @@
+{
+  "id": "promptmetheus",
+  "category": "qualite_clarte",
+  "link": "https://promptmetheus.com",
+  "order": 10,
+  "name": "Promptmetheus",
+  "description": {
+    "fr": "IDE pour tester, comparer et structurer des prompts.",
+    "en": "IDE for testing, comparing, and structuring prompts."
+  },
+  "why": {
+    "fr": "Arrêter l’approximation et comprendre ce qui fonctionne vraiment.",
+    "en": "Stop guessing and understand what actually works."
+  }
+}

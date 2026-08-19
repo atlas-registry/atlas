@@ -1,0 +1,20 @@
+{
+  "id": "pitch_deck_architect",
+  "category": "business",
+  "difficulty": "advanced",
+  "order": 22,
+  "labels": [
+    "fundraising",
+    "pitch"
+  ],
+  "variables": [
+    {
+      "name": "PITCH_CONTEXT",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

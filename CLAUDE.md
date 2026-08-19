@@ -8,30 +8,53 @@ Atlas is a public, curated database of AI tools, structured prompts, and educati
 
 Content exists in **French** (`.fr.json`) and **English** (`.en.json`).
 
-## i18n Strategy
+## Doctrine d'exécution
 
-- Each data file exists in two locales: `*.fr.json` and `*.en.json`
-- Both locales share the same IDs in the same order (enforced by CI)
-- Slugs (guides) are identical across locales
-- The front-end selects the correct file based on the user's locale
+Règles de l'art, jamais de rustine : aucune donnée fabriquée, aucun terme inventé
+hors vocabulaire, aucun contournement de la validation. Vérifier la documentation
+réelle d'une bibliothèque avant de l'utiliser plutôt que de s'en remettre à la
+mémoire. Toute modification laisse le dépôt validé : `npm run check` doit passer.
 
-## Repository Structure
+## Structure
 
-- `tools.fr.json` / `tools.en.json` — Curated AI tools (id, name, category, link, description, why)
-- `prompts.fr.json` / `prompts.en.json` — Reusable AI prompts (id, name, hook, category, labels, description, prompt, example_input, example_output, gains)
-- `guides.fr.json` / `guides.en.json` — Educational guides with full markdown content (id, title, description, category, content, readTime, difficulty, slug, date)
-- `.github/workflows/lint-json.yml` — CI: validates JSON syntax with `jq` + verifies FR/EN ID sync
-- `.github/workflows/changelog.yml` — Auto-generates CHANGELOG.md via `git-cliff`
-- `.github/cliff.toml` — Changelog config (conventional commits, French categories)
+**La source de vérité est `content/`.** Les fichiers JSON de la racine sont des
+artefacts générés par `scripts/build.mjs`, versionnés uniquement parce que
+raw.githubusercontent.com les sert directement au site. Ne jamais les éditer.
 
-## Validation
-
-```bash
-# Validate all JSON files locally
-for f in *.json; do jq empty "$f" && echo "✓ $f" || echo "✗ $f"; done
+```
+content/prompts/<id>/{meta.json,fr.md,en.md}
+content/guides/<slug>/{meta.json,fr.md,en.md}
+content/tools/<id>.json
 ```
 
-CI runs `jq empty` on all `*.json` files for PRs and pushes to `main`.
+Le partage est délibéré : `meta.json` porte ce qui est structurel et n'existe
+qu'une fois (catégorie, difficulté, labels, variables) ; les `.md` portent ce qui
+est rédigé et existe par langue. Une divergence FR/EN sur la structure est donc
+impossible par construction.
+
+## Vocabulaire contrôlé
+
+- `scripts/taxonomy.mjs` — catégories et labels autorisés, avec leurs libellés
+  d'affichage. Fermé : un label absent doit y être ajouté explicitement.
+- `scripts/variables.mjs` — variables de prompt : nom canonique, type de champ,
+  libellé et exemple par langue.
+
+Les identifiants ne sont jamais traduits. Seuls leurs libellés le sont.
+
+## Variables de prompt
+
+`{{…}}` est réservé aux saisies utilisateur, et les deux langues doivent porter
+exactement le même jeu de variables — le site en génère un formulaire. Pour
+illustrer un champ à personnaliser dans un exemple de sortie, utiliser des
+crochets (`[Prénom]`).
+
+## Commandes
+
+```bash
+npm run validate   # schémas, vocabulaire, parité des locales
+npm run build      # régénère les artefacts JSON de la racine
+npm run check      # validate + build + contrôle que les artefacts sont à jour
+```
 
 ## Commit Convention
 

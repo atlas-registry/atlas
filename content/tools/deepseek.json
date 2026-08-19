@@ -1,0 +1,15 @@
+{
+  "id": "deepseek",
+  "category": "penser_decider",
+  "link": "https://www.deepseek.com",
+  "order": 3,
+  "name": "DeepSeek",
+  "description": {
+    "fr": "Modèles performants et accessibles, orientés raisonnement et code.",
+    "en": "High-performing and accessible models focused on reasoning and code."
+  },
+  "why": {
+    "fr": "À explorer quand tu veux tester une alternative efficace à faible coût.",
+    "en": "Worth exploring when you want to test an effective low-cost alternative."
+  }
+}

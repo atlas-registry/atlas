@@ -1,0 +1,15 @@
+{
+  "id": "n8n",
+  "category": "automatiser",
+  "link": "https://n8n.io",
+  "order": 8,
+  "name": "n8n",
+  "description": {
+    "fr": "Automatisation open-source pour orchestrer APIs, données et IA.",
+    "en": "Open-source automation for orchestrating APIs, data, and AI."
+  },
+  "why": {
+    "fr": "Gagner du temps sans perdre le contrôle ni dépendre d’une boîte noire.",
+    "en": "Save time without losing control or depending on a black box."
+  }
+}

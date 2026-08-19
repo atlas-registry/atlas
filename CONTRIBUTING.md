@@ -1,61 +1,121 @@
-# Contribuer à Amazing AI Tools
+# Contribuer à Atlas
 
-Les contributions sont bienvenues 🎉
-Le but est simple : garder une liste utile, lisible et vraiment utilisée — pas un annuaire géant.
+Le but est de garder un registre utile et réellement utilisé, pas un annuaire géant.
+Une entrée qui n'apporte rien de neuf sera refusée, même bien écrite.
 
----
+## Prérequis
 
-## 🛠️ Comment contribuer
+```bash
+npm install
+```
 
-1. **Forkez** le dépôt
-2. Ajoutez ou modifiez un outil dans les fichiers concernés :
-   - `tools.fr.json` / `tools.en.json` → ajoutez l'entrée avec le même schéma que les autres (les deux langues doivent avoir les mêmes IDs)
-   - `prompts.fr.json` / `prompts.en.json` → idem pour les prompts
-   - `guides.fr.json` / `guides.en.json` → idem pour les guides
-3. Ouvrez une **Pull Request** incluant :
-   - une courte description de l’outil
-   - la catégorie envisagée
-   - pourquoi il mérite sa place dans la liste
+Node 20 ou plus.
 
----
+## Où vit le contenu
 
-## 📐 Format JSON attendu
+La source de vérité est le dossier `content/`. Les fichiers JSON à la racine
+(`prompts.fr.json`, `tools.en.json`…) sont **générés** : ne les modifiez jamais à
+la main, ils seraient écrasés au prochain build.
 
-Les prompts doivent suivre la structure :
+```
+content/
+  prompts/<id>/
+    meta.json   structure : catégorie, difficulté, labels, variables
+    fr.md       textes français  (frontmatter) + corps du prompt
+    en.md       textes anglais   (frontmatter) + corps du prompt
+  guides/<slug>/
+    meta.json, fr.md, en.md
+  tools/<id>.json
+```
 
-ROLE / CONTEXT / GOAL / FORMAT / INSTRUCTIONS / RULES / {{USERDATA}}
+Cette séparation est délibérée : ce qui est structurel n'existe qu'une fois et ne
+peut donc pas diverger d'une langue à l'autre, tandis que ce qui est rédigé
+existe dans les deux langues.
 
-→ Voir la section **“Structure des prompts”** dans le `README.md` pour un exemple complet.
+## Ajouter un prompt
+
+1. Créez `content/prompts/<id>/` — l'identifiant est en minuscules, mots séparés
+   par `_` ou `-`, et doit correspondre au nom du dossier.
+
+2. `meta.json` :
 
 ```json
 {
-  "id": "nom-unique",
-  "name": "Nom du prompt",
-  "llm": ["gpt-4o", "claude-3.5"],
-  "category": "dev",
-  "labels": ["tag1"],
-  "description": "Description...",
-  "prompt": "Le prompt complet...",
-  "example_input": "Exemple",
-  "example_output": "Exemple"
+  "id": "mon_prompt",
+  "category": "business",
+  "difficulty": "intermediate",
+  "order": 33,
+  "labels": ["validation", "pricing"],
+  "variables": [
+    { "name": "BUSINESS", "type": "textarea" },
+    { "name": "USERDATA", "type": "textarea" }
+  ]
 }
 ```
 
+- `category` et `labels` puisent dans le vocabulaire de `scripts/taxonomy.mjs`.
+  Aucun terme libre n'est accepté : si un label manque, ajoutez-le à la taxonomie
+  dans la même PR, en expliquant pourquoi les existants ne suffisent pas.
+- `variables` puise dans `scripts/variables.mjs`. Une variable absente de cette
+  table doit y être ajoutée avec ses libellés et exemples dans les deux langues.
+- `order` positionne le prompt dans les listes du site.
+
+3. `fr.md` et `en.md` :
+
+```markdown
+---
+name: Nom du prompt
+hook: Une phrase qui dit le bénéfice
+description: Ce que fait le prompt.
+gains: Ce que la personne obtient concrètement.
+example_input: "{{BUSINESS}}: une agence de design de 6 personnes"
+example_output: |-
+  Le résultat attendu, abrégé.
 ---
 
-## 💡 Règles simples
+ROLE:
+…
 
-- Un outil = une PR si possible
-- Pas de spam, affiliation ou placement marketing déguisé
-- Description courte, claire, en français
-- Pas d’emoji dans le JSON
-- Propose uniquement des outils que tu utilises ou recommandes réellement
+CONTEXT:
+…
 
----
+GOAL:
+…
 
-## ❓Besoin d’aide ?
+FORMAT:
+…
 
-- Ouvre une issue
-- Ou viens discuter (Discord bientôt 😉)
+INSTRUCTIONS:
+…
 
-Merci d’aider à faire de ce projet une ressource réellement utile 🙏
+RULES:
+…
+
+{{BUSINESS}}
+
+{{USERDATA}}
+```
+
+## Règles sur les variables
+
+- `{{…}}` est **strictement réservé aux saisies de l'utilisateur**. Pour montrer
+  un champ à personnaliser dans un exemple de sortie, utilisez des crochets :
+  `[Prénom]`, `[Entreprise]`.
+- Les deux langues doivent utiliser **exactement les mêmes variables**. C'est
+  vérifié par la CI, parce que le site en génère un formulaire : des variables
+  différentes produiraient deux formulaires différents selon la langue.
+- `{{USERDATA}}` termine tout prompt qui attend une saisie.
+
+## Avant d'ouvrir la PR
+
+```bash
+npm run validate   # schémas, vocabulaire, parité des locales
+npm run build      # régénère les artefacts JSON
+```
+
+Committez les artefacts régénérés : la CI vérifie qu'ils correspondent à la source.
+
+## Convention de commit
+
+Commits conventionnels, lus par `git-cliff` :
+`feat:` `fix:` `doc:` `perf:` `refactor:` `chore:`

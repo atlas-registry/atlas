@@ -1,0 +1,17 @@
+{
+  "name": "atlas-registry",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Registre de contenu Atlas : prompts, outils et guides bilingues",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "validate": "node scripts/validate.mjs",
+    "check": "pnpm run validate && pnpm run build && node scripts/check-artifacts.mjs"
+  },
+  "dependencies": {
+    "yaml": "^2.9.0",
+    "zod": "^4.1.13"
+  }
+}

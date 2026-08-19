@@ -1,0 +1,15 @@
+{
+  "id": "supabase_vector",
+  "category": "infra_pragmatique",
+  "link": "https://supabase.com/docs/guides/ai/vector-columns",
+  "order": 19,
+  "name": "Supabase Vector",
+  "description": {
+    "fr": "Stockage vectoriel intégré à Postgres.",
+    "en": "Vector storage built into Postgres."
+  },
+  "why": {
+    "fr": "Mettre du RAG en place sans ajouter une brique inutile.",
+    "en": "Set up RAG without adding an unnecessary component."
+  }
+}

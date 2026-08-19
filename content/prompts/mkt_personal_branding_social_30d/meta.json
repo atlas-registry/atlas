@@ -1,0 +1,26 @@
+{
+  "id": "mkt_personal_branding_social_30d",
+  "category": "marketing",
+  "difficulty": "intermediate",
+  "order": 10,
+  "labels": [
+    "content",
+    "growth",
+    "personal-branding",
+    "social-media"
+  ],
+  "variables": [
+    {
+      "name": "PLATFORMS",
+      "type": "text"
+    },
+    {
+      "name": "PROFILE",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

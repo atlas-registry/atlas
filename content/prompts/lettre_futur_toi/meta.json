@@ -1,0 +1,21 @@
+{
+  "id": "lettre_futur_toi",
+  "category": "introspection",
+  "difficulty": "beginner",
+  "order": 14,
+  "labels": [
+    "clarity",
+    "decision-making",
+    "purpose"
+  ],
+  "variables": [
+    {
+      "name": "CONTEXT",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

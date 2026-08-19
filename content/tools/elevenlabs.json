@@ -1,0 +1,15 @@
+{
+  "id": "elevenlabs",
+  "category": "creer_montrer",
+  "link": "https://elevenlabs.io",
+  "order": 16,
+  "name": "ElevenLabs",
+  "description": {
+    "fr": "Synthèse vocale réaliste et clonage de voix.",
+    "en": "Realistic voice synthesis and voice cloning."
+  },
+  "why": {
+    "fr": "Ajouter une voix crédible sans matériel ni studio.",
+    "en": "Add a credible voice without any equipment or studio."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "saas_idea_validator",
+  "category": "business",
+  "difficulty": "intermediate",
+  "order": 0,
+  "labels": [
+    "fundraising",
+    "market-research",
+    "validation"
+  ],
+  "variables": [
+    {
+      "name": "SAAS_IDEA",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "founder_energy_audit",
+  "category": "introspection",
+  "difficulty": "beginner",
+  "order": 7,
+  "labels": [
+    "energy",
+    "productivity"
+  ],
+  "variables": [
+    {
+      "name": "TYPICAL_WEEK",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}

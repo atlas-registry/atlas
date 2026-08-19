@@ -1,0 +1,15 @@
+{
+  "id": "promptlayer",
+  "category": "qualite_clarte",
+  "link": "https://promptlayer.com",
+  "order": 11,
+  "name": "PromptLayer",
+  "description": {
+    "fr": "Suivi et versioning des prompts et appels IA.",
+    "en": "Prompt and AI call tracking and versioning."
+  },
+  "why": {
+    "fr": "Garder une trace claire de ce qui marche et de ce qui casse.",
+    "en": "Keep a clear record of what works and what breaks."
+  }
+}

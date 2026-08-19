@@ -1,0 +1,20 @@
+{
+  "id": "saboteur_interne",
+  "category": "introspection",
+  "difficulty": "beginner",
+  "order": 15,
+  "labels": [
+    "clarity",
+    "growth"
+  ],
+  "variables": [
+    {
+      "name": "CONTEXT",
+      "type": "textarea"
+    },
+    {
+      "name": "USERDATA",
+      "type": "textarea"
+    }
+  ]
+}
