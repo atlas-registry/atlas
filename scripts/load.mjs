@@ -10,6 +10,8 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import YAML from 'yaml'
 
+import { CARTOGRAPHIE_ROLES } from './taxonomy.mjs'
+
 export const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 export const LOCALES = ['fr', 'en']
 
@@ -76,4 +78,33 @@ export function loadTools() {
     .filter((file) => file.endsWith('.json'))
     .sort()
     .map((file) => readJson(join(base, file)))
+}
+
+/**
+ * Cartographies : entretiens conduits, par opposition aux prompts qui sont des
+ * gabarits à trou. Chacune porte trois documents par locale — le gabarit de
+ * conduite, les consignes de la Carte, celles du Dossier — parce que ce sont
+ * trois appels distincts au modèle et non trois sections d'un même texte.
+ */
+export function loadCartographies() {
+  const base = join(ROOT, 'content/cartographies')
+
+  return directoriesIn(base).map((id) => {
+    const meta = readJson(join(base, id, 'meta.json'))
+    const documents = {}
+
+    for (const role of CARTOGRAPHIE_ROLES) {
+      documents[role] = Object.fromEntries(
+        LOCALES.map((locale) => {
+          const file = join(base, id, `${role}.${locale}.md`)
+          if (!existsSync(file)) {
+            throw new Error(`cartographie ${id} : ${role}.${locale}.md manquant`)
+          }
+          return [locale, parseDocument(readFileSync(file, 'utf8'), `${id}/${role}.${locale}.md`)]
+        })
+      )
+    }
+
+    return { meta, documents, directory: id }
+  })
 }

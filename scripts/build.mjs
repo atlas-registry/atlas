@@ -8,7 +8,7 @@
 import { writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 
-import { LOCALES, ROOT, loadGuides, loadPrompts, loadTools } from './load.mjs'
+import { LOCALES, ROOT, loadCartographies, loadGuides, loadPrompts, loadTools } from './load.mjs'
 import { LABELS } from './taxonomy.mjs'
 import { VARIABLES } from './variables.mjs'
 
@@ -22,6 +22,7 @@ const write = (file, data) => {
 const prompts = loadPrompts().sort(byOrder)
 const guides = loadGuides().sort(byOrder)
 const tools = loadTools().sort((a, b) => a.order - b.order)
+const cartographies = loadCartographies().sort(byOrder)
 
 for (const locale of LOCALES) {
   const promptEntries = prompts.map(({ meta, locales }) => ({
@@ -67,7 +68,27 @@ for (const locale of LOCALES) {
     why: tool.why[locale],
   }))
 
+  // Une Cartographie est livrée prête à l'emploi : les trois consignes et les
+  // axes déjà résolus dans la locale, pour que le site n'ait rien à assembler.
+  const cartographieEntries = cartographies.map(({ meta, documents }) => ({
+    id: meta.id,
+    name: documents.entretien[locale].data.name,
+    hook: documents.entretien[locale].data.hook,
+    promesse: documents.entretien[locale].data.promesse,
+    description: documents.entretien[locale].data.description,
+    attribution: documents.entretien[locale].data.attribution ?? null,
+    category: meta.category,
+    difficulty: meta.difficulty,
+    labels: meta.labels,
+    tours: meta.tours,
+    axes: meta.axes.map((id) => ({ id, label: documents.entretien[locale].data.axes[id] })),
+    entretien: documents.entretien[locale].body,
+    carte: documents.carte[locale].body,
+    dossier: documents.dossier[locale].body,
+  }))
+
   write(`prompts.${locale}.json`, promptEntries)
+  write(`cartographies.${locale}.json`, cartographieEntries)
   write(`guides.${locale}.json`, guideEntries)
   write(`tools.${locale}.json`, toolEntries)
 
@@ -84,6 +105,7 @@ for (const locale of LOCALES) {
 }
 
 console.log(`prompts : ${prompts.length}`)
+console.log(`cartographies : ${cartographies.length}`)
 console.log(`guides  : ${guides.length}`)
 console.log(`outils  : ${tools.length}`)
-console.log(`artefacts : ${LOCALES.length * 4} fichiers`)
+console.log(`artefacts : ${LOCALES.length * 5} fichiers`)
