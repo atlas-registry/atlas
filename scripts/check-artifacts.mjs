@@ -9,7 +9,7 @@ import { execFileSync } from 'node:child_process'
 
 import { ROOT } from './load.mjs'
 
-const ARTIFACTS = ['prompts', 'guides', 'tools', 'labels'].flatMap((resource) =>
+const ARTIFACTS = ['prompts', 'cartographies', 'guides', 'tools', 'labels'].flatMap((resource) =>
   ['fr', 'en'].map((locale) => `${resource}.${locale}.json`)
 )
 

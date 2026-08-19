@@ -1,0 +1,9 @@
+{
+  "id": "raison-detre",
+  "category": "introspection",
+  "difficulty": "beginner",
+  "order": 0,
+  "labels": ["positioning", "purpose"],
+  "tours": { "min": 8, "max": 40 },
+  "axes": ["passion", "talent", "mission", "profession"]
+}

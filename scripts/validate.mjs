@@ -8,8 +8,16 @@
  */
 import { z } from 'zod'
 
-import { LOCALES, loadGuides, loadPrompts, loadTools } from './load.mjs'
-import { CATEGORIES, DIFFICULTIES, LABELS, USER_INPUT_TOKEN, VARIABLE_TYPES } from './taxonomy.mjs'
+import { LOCALES, loadCartographies, loadGuides, loadPrompts, loadTools } from './load.mjs'
+import {
+  CARTOGRAPHIE_ROLES,
+  CATEGORIES,
+  DIFFICULTIES,
+  LABELS,
+  RUNTIME_TOKENS,
+  USER_INPUT_TOKEN,
+  VARIABLE_TYPES,
+} from './taxonomy.mjs'
 import { VARIABLES } from './variables.mjs'
 
 const problems = []
@@ -55,6 +63,35 @@ const guideTextSchema = z.object({
   title: z.string().min(1),
   description: z.string().min(1),
 })
+
+const cartographieMetaSchema = z.object({
+  id: slug,
+  category: z.enum(CATEGORIES),
+  difficulty: z.enum(DIFFICULTIES),
+  order: z.number().int().nonnegative(),
+  labels: z.array(z.enum(Object.keys(LABELS))).min(1).max(5),
+  // Le plafond de tours est éditorial : il borne le coût d'un entretien par
+  // construction. Le plancher empêche une conclusion prématurée.
+  tours: z
+    .object({ min: z.number().int().positive(), max: z.number().int().positive() })
+    .refine((value) => value.min < value.max, 'tours.min doit être inférieur à tours.max'),
+  axes: z.array(slug).min(2).max(6),
+})
+
+const cartographieTextSchema = z.object({
+  name: z.string().min(1),
+  hook: z.string().min(1).max(120),
+  // La promesse est le point de conversion : elle doit nommer ce qu'on va
+  // savoir, ce qu'on pourra faire, le coût honnête et la tension pressentie.
+  // Sa longueur minimale n'est pas cosmétique, elle rend improbable une
+  // promesse creuse en trois mots.
+  promesse: z.string().min(80),
+  description: z.string().min(1),
+  attribution: z.string().min(1).optional(),
+  axes: z.record(slug, z.string().min(1)),
+})
+
+const cartographieDocumentSchema = z.object({ titre: z.string().min(1) })
 
 const toolSchema = z.object({
   id: slug,
@@ -141,6 +178,63 @@ for (const { meta, locales, directory } of guides) {
   }
 }
 
+// --- cartographies -------------------------------------------------------
+const cartographies = loadCartographies()
+const seenCartographies = new Set()
+
+for (const { meta, documents, directory } of cartographies) {
+  const where = `cartographie ${directory}`
+
+  if (!check(cartographieMetaSchema, meta, `${where}/meta.json`)) continue
+  if (meta.id !== directory) fail(where, `l'identifiant « ${meta.id} » ne correspond pas au dossier`)
+  if (seenCartographies.has(meta.id)) fail(where, 'identifiant en double')
+  seenCartographies.add(meta.id)
+
+  for (const locale of LOCALES) {
+    const entretien = documents.entretien[locale]
+    check(cartographieTextSchema, entretien.data, `${where}/entretien.${locale}.md`)
+
+    // Les axes sont la structure de la carte : ils sont déclarés une fois dans
+    // meta.json et seuls leurs libellés sont traduits. Une divergence ici
+    // produirait une carte dont les axes changent selon la langue.
+    const libelles = Object.keys(entretien.data.axes ?? {}).sort()
+    const declares = [...meta.axes].sort()
+    if (libelles.join(',') !== declares.join(',')) {
+      fail(
+        `${where}/entretien.${locale}.md`,
+        `axes divergents — meta: ${declares.join(', ')} | libellés: ${libelles.join(', ')}`
+      )
+    }
+
+    const used = tokensIn(entretien.body)
+    const unknown = used.filter((name) => !RUNTIME_TOKENS.includes(name))
+    if (unknown.length > 0) {
+      fail(`${where}/entretien.${locale}.md`, `jeton hors vocabulaire : ${unknown.join(', ')}`)
+    }
+
+    // Sans ces trois jetons, le moteur ne peut ni borner l'entretien ni
+    // transmettre l'état de la carte : la conduite dériverait silencieusement.
+    for (const requis of ['TOURS_MAX', 'TOUR_COURANT', 'CARTE_PRECEDENTE']) {
+      if (!used.includes(requis)) {
+        fail(`${where}/entretien.${locale}.md`, `jeton {{${requis}}} attendu dans le gabarit`)
+      }
+    }
+
+    for (const role of CARTOGRAPHIE_ROLES) {
+      const document = documents[role][locale]
+      if (role !== 'entretien') {
+        check(cartographieDocumentSchema, document.data, `${where}/${role}.${locale}.md`)
+      }
+      if (document.body.length < 200) {
+        fail(`${where}/${role}.${locale}.md`, 'consignes anormalement courtes')
+      }
+    }
+  }
+
+  const [fr, en] = LOCALES.map((locale) => tokensIn(documents.entretien[locale].body).join(','))
+  if (fr !== en) fail(where, `jetons divergents entre locales — FR: ${fr} | EN: ${en}`)
+}
+
 // --- outils --------------------------------------------------------------
 const seenTools = new Set()
 for (const tool of loadTools()) {
@@ -157,4 +251,6 @@ if (problems.length > 0) {
   process.exit(1)
 }
 
-console.log(`registre valide : ${prompts.length} prompts, ${guides.length} guides, ${seenTools.size} outils`)
+console.log(
+  `registre valide : ${prompts.length} prompts, ${cartographies.length} cartographies, ${guides.length} guides, ${seenTools.size} outils`
+)

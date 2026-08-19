@@ -113,3 +113,16 @@ export const USER_INPUT_TOKEN = 'USERDATA'
 export const DIFFICULTIES = ['beginner', 'intermediate', 'advanced']
 
 export const VARIABLE_TYPES = ['text', 'textarea']
+
+/**
+ * Jetons d'exécution d'une Cartographie.
+ *
+ * Ce ne sont pas des variables saisies par l'utilisateur mais des valeurs
+ * injectées par le moteur d'entretien à chaque tour. Le vocabulaire est fermé
+ * pour la même raison que celui des variables : une faute de frappe dans un
+ * gabarit passerait inaperçue et le modèle lirait le jeton comme une consigne.
+ */
+export const RUNTIME_TOKENS = ['TOURS_MIN', 'TOURS_MAX', 'TOUR_COURANT', 'CARTE_PRECEDENTE']
+
+/** Rôles d'un document de Cartographie. Un fichier par rôle et par locale. */
+export const CARTOGRAPHIE_ROLES = ['entretien', 'carte', 'dossier']
