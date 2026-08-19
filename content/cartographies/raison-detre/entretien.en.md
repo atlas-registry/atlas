@@ -3,7 +3,7 @@ name: Reason for Being
 hook: The exact place where your life does not yet overlap
 promesse: >-
   In about ten questions, the exact place where what you love, what you are good
-  at and what you are paid for do not yet meet — and the first step to bring
+  at and what you are paid for do not yet meet - and the first step to bring
   them closer. Allow twenty minutes. Your card straight away, your full report
   by email.
 description: >-

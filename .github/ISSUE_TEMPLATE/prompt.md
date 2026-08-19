@@ -1,48 +1,45 @@
 ---
-name: Prompt
-about: Describe this issue template's purpose here.
-title: "[Prompt]"
-labels: enhancement
+name: Suggest a prompt
+about: Propose a prompt without opening a pull request. Useful if you have the content but not the setup.
+title: "[Prompt] "
+labels: content
 assignees: folpe
 
 ---
 
-## 📝 Informations de base
+> Before writing: does the registry already cover this? A prompt that overlaps an existing one
+> will be declined even if it is well written. See [CONTRIBUTING](../blob/main/CONTRIBUTING.md).
 
-**Nom du prompt**
+## The basics
 
-**Hook** *(accroche en une phrase)*
+**Name**
 
-**Catégorie** *(business, marketing, code, productivity, writing, analysis, creative)*
+**Hook** - one sentence stating the benefit
 
-**Labels** *(2-4 mots-clés)*
+**Category** - one of: `business`, `growth`, `marketing`, `automation`, `dev`, `productivity`, `introspection`
 
----
+**What it brings that nothing here already does**
 
-## 🎯 Description
+## What the reader walks away with
 
-**Description courte**
+_Be concrete. Not "a better understanding", but the actual artifact they end up holding._
 
-**Gains** *(ce que l'utilisateur obtient)*
-
----
-
-## 🤖 Le prompt
+## The prompt
 
 ```
 
 ```
 
----
-
-## 💬 Exemple
+## An example
 
 **Input**
-```
 
 ```
 
-**Output attendu**
+```
+
+**Expected output**
+
 ```
 
 ```

@@ -82,8 +82,8 @@ export function loadTools() {
 
 /**
  * Cartographies : entretiens conduits, par opposition aux prompts qui sont des
- * gabarits à trou. Chacune porte trois documents par locale — le gabarit de
- * conduite, les consignes de la Carte, celles du Dossier — parce que ce sont
+ * gabarits à trou. Chacune porte trois documents par locale - le gabarit de
+ * conduite, les consignes de la Carte, celles du Dossier - parce que ce sont
  * trois appels distincts au modèle et non trois sections d'un même texte.
  */
 export function loadCartographies() {

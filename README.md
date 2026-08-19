@@ -1,159 +1,129 @@
-![Lang](https://img.shields.io/badge/lang-FR-blue)
-![IA](https://img.shields.io/badge/focus-IA%20%2F%20LLM-purple)
-![Contributions](https://img.shields.io/badge/PRs-welcome-brightgreen)
-![Status](https://img.shields.io/badge/status-liste%20vivante-orange)
+# Atlas Registry
 
-# Atlas
+[![Registry CI](https://github.com/atlas-registry/atlas/actions/workflows/lint-json.yml/badge.svg)](https://github.com/atlas-registry/atlas/actions/workflows/lint-json.yml)
+[![Locales](https://img.shields.io/badge/locales-fr%20%7C%20en-blue)](#the-bilingual-guarantee)
+[![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 
-Atlas est une base de données publique d’outils IA et de prompts, utilisée pour alimenter
-le mini-site : [https://atlas.voidcorp.io](https://atlas.voidcorp.io).
+The content source behind **[atlas.voidcorp.io](https://atlas.voidcorp.io)** - a bilingual
+library of AI prompts and guided interviews for founders and solo operators.
 
-- Pas de SaaS caché
-- Pas de tracking invasif
-- Juste des fichiers JSON versionnés sur GitHub
+Every resource is published in French and in English. French is where the editorial attention
+goes today, but neither locale is a translation afterthought: the CI refuses any change that lets
+the two drift apart.
 
-L’objectif : garder une liste **utile, compacte et réellement utilisée**, plutôt qu’un annuaire
-infini impossible à maintenir.
-
----
-
-## 📂 Structure du dépôt
-
-Le dépôt contient des fichiers de données en deux langues (FR / EN) :
-
-- `tools.fr.json` / `tools.en.json`
-  → Liste d'outils IA (frameworks d'agents, automatisation, LLM providers, etc.)
-
-- `prompts.fr.json` / `prompts.en.json`
-  → Liste de prompts IA structurés pour des usages concrets (productivité, dev, business…).
-
-- `guides.fr.json` / `guides.en.json`
-  → Guides pédagogiques avec contenu markdown complet.
-
-Chaque paire FR/EN partage les mêmes IDs dans le même ordre. La CI vérifie la synchronisation.
-
-Ces fichiers sont consommés par le site `atlas.voidcorp.io` qui les affiche avec une interface
-filtrable.
+Everything is plain files in git. No CMS, no database, no admin panel. A pull request is the
+editing interface, and the review is the quality gate.
 
 ---
 
-## 🔍 Comment c’est utilisé ?
+## What is in here
 
-1. Les fichiers `*.fr.json` et `*.en.json` sont hébergés ici sur GitHub.
-2. Le site front (`atlas-site`) les récupère en lecture seule (via `raw.githubusercontent.com`) selon la locale choisie.
-3. À chaque Pull Request mergée :
-   - les données sont mises à jour
-   - le site est automatiquement synchronisé
-
-Aucune logique complexe côté back : **GitHub est la source de vérité.**
-
----
-
-## 🤝 Contribuer
-
-Les contributions sont les bienvenues 🎉
-
-Tu peux :
-
-- proposer un **nouvel outil IA**
-- proposer un **nouveau prompt**
-- améliorer une description, une catégorie, des labels, etc.
-
-👉 Tout se fait via Pull Request.
-Les détails du format et des règles se trouvent dans [`CONTRIBUTING.md`](./CONTRIBUTING.md).
-
-En résumé :
-
-- Un outil / prompt = **une PR** si possible
-- JSON propre, descriptif en français
-- Pas de spam ni de lien affilié
+| Resource | Count | What it is |
+| --- | --- | --- |
+| **Cartographies** | 1 | Guided interviews. Several turns, a shareable card, then a full report |
+| **Prompts** | 33 | Single-shot templates with declared input variables |
+| **Guides** | 21 | Long-form markdown articles |
+| **Tools** | 22 | Curated AI tools. **Frozen** - see [scope](./CONTRIBUTING.md) |
+| **Labels** | 35 | Closed vocabulary shared by every resource |
 
 ---
 
-## 🧱 Structure des prompts
-
-Les prompts de l’Atlas suivent tous la même structure pour rester lisibles, réutilisables
-et faciles à adapter dans des outils (agents, workflows, etc.) :
-
-```txt
-ROLE
-Définis qui est l’IA (expertise, posture).
-
-CONTEXT
-Explique la situation, ce que l’IA reçoit, pour qui elle répond.
-
-GOAL
-Objectif clair du prompt (ce qu’on attend comme résultat).
-
-FORMAT
-Structure attendue de la réponse (liste, tableau, sections, JSON, etc.).
-
-INSTRUCTIONS
-Détails pratiques : ton, style, niveau de détail, ce qu’il faut éviter.
-
-RULES
-Contraintes strictes (langue, interdits, limites, validations, etc.).
-
-{{USERDATA}}
-Bloc final qui décrit ce que l’utilisateur doit fournir (idée, texte, code, liste de tâches…).
-```
-
-Dans prompts.json, le champ prompt contient donc un texte structuré
-selon ce modèle, par exemple :
-
-```txt
-ROLE:
-Tu es un investisseur VC très exigeant spécialisé dans les SaaS B2B.
-
-CONTEXT:
-On te soumet une idée de SaaS à analyser rapidement...
-
-GOAL:
-Évaluer la solidité de l'idée et donner une recommandation claire...
-
-FORMAT:
-1/ ...
-2/ ...
-
-INSTRUCTIONS:
-- ...
-
-RULES:
-- ...
-
-{{USERDATA}}
-Idée de SaaS à analyser : {{IDEE_SAAS}}
+## How it works
 
 ```
+content/            source of truth, reviewed in pull requests
+   │
+   │  npm run build
+   ▼
+*.fr.json           generated artifacts, committed to the repo
+*.en.json
+   │
+   │  raw.githubusercontent.com
+   ▼
+atlas.voidcorp.io   validated again at build time against Zod schemas
+```
 
-Quand tu proposes un nouveau prompt, essaie de respecter ce format autant que possible.
-Ça permet :
+The artifacts at the repository root are **generated**. Never edit them by hand - the CI compares
+them against the source and fails when they disagree.
 
-- de comprendre rapidement à quoi il sert
-- de le brancher plus facilement dans des workflows (n8n, agents, etc.)
-- de garder une qualité homogène dans tout l’Atlas
+### The bilingual guarantee
+
+Anything structural - identifiers, categories, labels, input variables, interview axes - is
+declared **once**, in a locale-neutral file. Only display strings are translated.
+
+This is not a stylistic preference. The site generates input forms from these declarations: two
+diverging locales would produce two different forms depending on the reader's language. That class
+of bug used to affect 14 prompts. It is now structurally impossible, and the CI proves it on every
+pull request.
+
+### Cartographies are not prompts
+
+A prompt is a template with holes, filled in once. A **Cartographie** is an interview conducted
+over several turns that produces two distinct artifacts: a card meant to be shared, then a
+developed report.
+
+It therefore carries three sets of instructions per language - conduct the interview, render the
+card, write the report - because those are three separate model calls, not three sections of one
+text. Turn ceilings and card axes are declared in metadata so that the cost of an interview is
+bounded by construction rather than by convention.
 
 ---
 
-## 🧰 Où voir le rendu ?
+## Consuming the data
 
-L’interface qui consomme ces données est disponible ici :
+The artifacts are served directly over `raw.githubusercontent.com`:
 
-➡️ **Site** : <https://atlas.voidcorp.io>
+```
+https://raw.githubusercontent.com/atlas-registry/atlas/refs/heads/main/prompts.fr.json
+https://raw.githubusercontent.com/atlas-registry/atlas/refs/heads/main/cartographies.en.json
+```
+
+Available resources: `prompts`, `cartographies`, `guides`, `tools`, `labels` - each in `.fr.json`
+and `.en.json`.
+
+**Stability contract.** Fields may be added; they are not removed and their types do not change
+without coordination with the site. Treat the data as untrusted until you have validated it
+against your own schema - that is what the site does.
 
 ---
 
-## 🗺️ Roadmap (indicative)
+## Working on the registry
 
-- [ ] Enrichir la liste d’outils IA (agents, automation, RAG, local LLM…)
-- [ ] Développer la partie prompts (use cases concrets, productivité, dev)
-- [ ] Ajouter des tags plus fins (stack, self-host, pricing…)
-- [ ] Exposer des stats publiques (outils les plus consultés, clics, etc.)
-- [ ] Automatiser la création de PR à partir d’un formulaire sur le site
+Requires Node 20 or later.
 
-Si tu veux donner un coup de main, tu peux :
+```bash
+npm install
+npm run validate   # schemas, controlled vocabulary, locale parity
+npm run build      # regenerate the JSON artifacts
+npm run check      # both, plus artifact drift detection
+```
 
-- ouvrir une issue avec des idées d’évolution
-- proposer une PR d’amélioration (données ou docs)
+```
+content/
+  cartographies/<id>/   meta.json, entretien|carte|dossier × fr|en
+  prompts/<id>/         meta.json, fr.md, en.md
+  guides/<slug>/        meta.json, fr.md, en.md
+  tools/<id>.json
+scripts/
+  load.mjs              reads the source
+  validate.mjs          schemas and controlled vocabulary
+  build.mjs             generates the artifacts
+  taxonomy.mjs          categories, labels, runtime tokens - all closed sets
+  variables.mjs         input variables with their labels in both locales
+```
 
-Merci d’aider à faire d’Atlas une ressource vraiment utile 🙏
+---
+
+## Contributing
+
+Contributions are welcome, and **[CONTRIBUTING.md](./CONTRIBUTING.md) is worth reading first** -
+it states what Atlas accepts and what it does not, so you do not write a pull request for nothing.
+
+The short version: Cartographies, prompts and guides are open. The tools catalogue is frozen.
+Submitting your own product is allowed if you disclose it and accept the same bar as everyone else.
+
+---
+
+## License
+
+MIT - see [LICENSE](./LICENSE).

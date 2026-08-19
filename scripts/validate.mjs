@@ -1,7 +1,7 @@
 /**
  * Validation de la source du registre.
  *
- * Objectif : rendre impossible la classe de défauts qui a motivé la refonte —
+ * Objectif : rendre impossible la classe de défauts qui a motivé la refonte -
  * variables divergentes entre locales, labels inventés à l'écriture, champs
  * absents d'une langue. Toute anomalie est signalée, et le script sort en
  * erreur pour bloquer la CI.
@@ -107,7 +107,7 @@ const check = (schema, value, where) => {
   const result = schema.safeParse(value)
   if (!result.success) {
     for (const issue of result.error.issues) {
-      fail(where, `${issue.path.join('.') || '(racine)'} — ${issue.message}`)
+      fail(where, `${issue.path.join('.') || '(racine)'} - ${issue.message}`)
     }
   }
   return result.success
@@ -156,7 +156,7 @@ for (const { meta, locales, directory } of prompts) {
 
   // Le cœur de la garantie : les deux locales exposent le même formulaire.
   const [fr, en] = LOCALES.map((locale) => tokensIn(locales[locale].body).join(','))
-  if (fr !== en) fail(where, `variables divergentes entre locales — FR: ${fr} | EN: ${en}`)
+  if (fr !== en) fail(where, `variables divergentes entre locales - FR: ${fr} | EN: ${en}`)
 }
 
 // --- guides --------------------------------------------------------------
@@ -202,7 +202,7 @@ for (const { meta, documents, directory } of cartographies) {
     if (libelles.join(',') !== declares.join(',')) {
       fail(
         `${where}/entretien.${locale}.md`,
-        `axes divergents — meta: ${declares.join(', ')} | libellés: ${libelles.join(', ')}`
+        `axes divergents - meta: ${declares.join(', ')} | libellés: ${libelles.join(', ')}`
       )
     }
 
@@ -232,7 +232,7 @@ for (const { meta, documents, directory } of cartographies) {
   }
 
   const [fr, en] = LOCALES.map((locale) => tokensIn(documents.entretien[locale].body).join(','))
-  if (fr !== en) fail(where, `jetons divergents entre locales — FR: ${fr} | EN: ${en}`)
+  if (fr !== en) fail(where, `jetons divergents entre locales - FR: ${fr} | EN: ${en}`)
 }
 
 // --- outils --------------------------------------------------------------

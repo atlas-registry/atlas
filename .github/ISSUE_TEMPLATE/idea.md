@@ -1,24 +1,24 @@
 ---
-name: Idea
-about: Describe this issue template's purpose here.
-title: "[Idée]"
-labels: enhancement
+name: Suggest an idea
+about: Propose a Cartographie, an improvement or a direction - anything that is not a ready-made prompt.
+title: "[Idea] "
+labels: idea
 assignees: folpe
 
 ---
 
-## 💡 Votre idée
+## The idea
 
-**Description**
+**What it is**
 
-**Problème résolu**
+**What problem it solves, for whom**
 
-**Catégorie** *(prompt, outil, amélioration, autre)*
+_Atlas is for French-speaking founders and solo operators. Whose problem is this?_
 
----
+## Why it belongs in Atlas
 
-## 🎯 Détails
+_What does it bring that the registry does not already have?_
 
-**Pourquoi c'est utile ?**
+## What it would look like in practice
 
-**Exemple d'utilisation**
+_A concrete example. An interview turn, a card, a step someone would actually take._
