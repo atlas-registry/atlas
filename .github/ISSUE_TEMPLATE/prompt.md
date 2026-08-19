@@ -14,9 +14,9 @@ assignees: folpe
 
 **Name**
 
-**Hook** — one sentence stating the benefit
+**Hook** - one sentence stating the benefit
 
-**Category** — one of: `business`, `growth`, `marketing`, `automation`, `dev`, `productivity`, `introspection`
+**Category** - one of: `business`, `growth`, `marketing`, `automation`, `dev`, `productivity`, `introspection`
 
 **What it brings that nothing here already does**
 

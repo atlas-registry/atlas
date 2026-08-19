@@ -7,15 +7,16 @@ An entry that adds nothing new will be declined, however well written.
 
 Read this section before opening a pull request. It will save you from writing for nothing.
 
-**Atlas is for French-speaking founders and solo operators**, across two connected areas:
-understanding yourself (introspection, positioning, energy) and moving your business forward
-(validation, pricing, distribution).
+**Atlas is for founders and solo operators**, across two connected areas: understanding yourself
+(introspection, positioning, energy) and moving your business forward (validation, pricing,
+distribution). It is published in French and in English; the French audience is the one it
+currently reaches.
 
 ### Open to contributions
 
-- **Cartographies** — the guided interviews. This is the core of the product and where a
+- **Cartographies** - the guided interviews. This is the core of the product and where a
   contribution carries the most value.
-- **Prompts** — always welcome when they bring something the registry does not already have.
+- **Prompts** - always welcome when they bring something the registry does not already have.
 - **Guides.**
 
 ### Not open
@@ -23,16 +24,16 @@ understanding yourself (introspection, positioning, energy) and moving your busi
 - **The tools catalogue is frozen.** No new tool is accepted. This is not a judgement on the
   products submitted: the catalogue creates recurring maintenance for almost no usage, and Atlas
   is refocusing on interviews. Existing entries are still served, they are no longer extended.
-- **Anything outside a founder's work** — entertainment, consumer visual creation, narrow
+- **Anything outside a founder's work** - entertainment, consumer visual creation, narrow
   technical tools with no link to the promise.
-- **Any tool whose primary use is to deceive someone** — impersonating another person,
+- **Any tool whose primary use is to deceive someone** - impersonating another person,
   fabricating a document or an image presented as authentic, defeating an identity check.
   Whatever the publisher's intent, listing these commits the Atlas name.
 
 ### Submitting your own product
 
 This is allowed, on two conditions: **disclose it explicitly in the pull request**, and accept
-being judged by the same criterion as everything else — does it bring something the registry does
+being judged by the same criterion as everything else - does it bring something the registry does
 not already have. An honest, well-made contribution can still be declined on scope. That is not a
 reproach.
 
@@ -74,7 +75,7 @@ languages, while what is written exists in both.
 
 ## Adding a prompt
 
-1. Create `content/prompts/<id>/` — the identifier is lowercase, words separated by `_` or `-`,
+1. Create `content/prompts/<id>/` - the identifier is lowercase, words separated by `_` or `-`,
    and must match the directory name.
 
 2. `meta.json`:
@@ -236,5 +237,6 @@ Conventional commits, read by `git-cliff`:
 ## A note on language
 
 The registry's public documentation is in English so that anyone can contribute. **The content
-itself is bilingual**: every resource must be provided in French and in English. French is the
-project's primary audience, and the French wording is the one that gets the editorial attention.
+itself is bilingual**: every resource must be provided in French and in English, and neither is a
+translation afterthought. French is the audience the project currently reaches, and the French
+wording is the one that gets the most editorial attention.

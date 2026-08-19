@@ -3,7 +3,7 @@ name: Raison d'Être
 hook: L'endroit précis où ta vie ne se recouvre pas encore
 promesse: >-
   En une dizaine de questions, l'endroit précis où ce que tu aimes, ce que tu
-  fais bien et ce pour quoi on te paie ne se rejoignent pas encore — et le
+  fais bien et ce pour quoi on te paie ne se rejoignent pas encore - et le
   premier pas pour les rapprocher. Compte vingt minutes. Ta carte tout de suite,
   ton dossier complet par email.
 description: >-

@@ -1,6 +1,6 @@
 ---
 name: Suggest an idea
-about: Propose a Cartographie, an improvement or a direction — anything that is not a ready-made prompt.
+about: Propose a Cartographie, an improvement or a direction - anything that is not a ready-made prompt.
 title: "[Idea] "
 labels: idea
 assignees: folpe

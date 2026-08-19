@@ -43,4 +43,4 @@ _Be specific. "Another prompt about pricing" is not an answer if three already e
 ### Disclosure
 
 _If you are connected to the product or service being submitted, say so here. It is allowed, and
-declaring it costs you nothing — omitting it costs you the pull request._
+declaring it costs you nothing - omitting it costs you the pull request._

@@ -4,7 +4,7 @@
  * Les identifiants (labels, variables, catégories) ne sont jamais traduits :
  * ce sont des clés techniques, en anglais, partagées par les deux locales.
  * Seuls leurs libellés d'affichage le sont. C'est ce qui rend une divergence
- * FR/EN structurellement impossible — le défaut qui affectait 14 prompts et
+ * FR/EN structurellement impossible - le défaut qui affectait 14 prompts et
  * l'ensemble de la taxonomie avant cette refonte.
  */
 

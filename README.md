@@ -4,8 +4,12 @@
 [![Locales](https://img.shields.io/badge/locales-fr%20%7C%20en-blue)](#the-bilingual-guarantee)
 [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 
-The content source behind **[atlas.voidcorp.io](https://atlas.voidcorp.io)** — a French-language
+The content source behind **[atlas.voidcorp.io](https://atlas.voidcorp.io)** - a bilingual
 library of AI prompts and guided interviews for founders and solo operators.
+
+Every resource is published in French and in English. French is where the editorial attention
+goes today, but neither locale is a translation afterthought: the CI refuses any change that lets
+the two drift apart.
 
 Everything is plain files in git. No CMS, no database, no admin panel. A pull request is the
 editing interface, and the review is the quality gate.
@@ -19,11 +23,8 @@ editing interface, and the review is the quality gate.
 | **Cartographies** | 1 | Guided interviews. Several turns, a shareable card, then a full report |
 | **Prompts** | 33 | Single-shot templates with declared input variables |
 | **Guides** | 21 | Long-form markdown articles |
-| **Tools** | 22 | Curated AI tools. **Frozen** — see [scope](./CONTRIBUTING.md) |
+| **Tools** | 22 | Curated AI tools. **Frozen** - see [scope](./CONTRIBUTING.md) |
 | **Labels** | 35 | Closed vocabulary shared by every resource |
-
-Every resource exists in **French and English**, and the CI refuses any change where the two
-drift apart.
 
 ---
 
@@ -42,12 +43,12 @@ content/            source of truth, reviewed in pull requests
 atlas.voidcorp.io   validated again at build time against Zod schemas
 ```
 
-The artifacts at the repository root are **generated**. Never edit them by hand — the CI compares
+The artifacts at the repository root are **generated**. Never edit them by hand - the CI compares
 them against the source and fails when they disagree.
 
 ### The bilingual guarantee
 
-Anything structural — identifiers, categories, labels, input variables, interview axes — is
+Anything structural - identifiers, categories, labels, input variables, interview axes - is
 declared **once**, in a locale-neutral file. Only display strings are translated.
 
 This is not a stylistic preference. The site generates input forms from these declarations: two
@@ -61,8 +62,8 @@ A prompt is a template with holes, filled in once. A **Cartographie** is an inte
 over several turns that produces two distinct artifacts: a card meant to be shared, then a
 developed report.
 
-It therefore carries three sets of instructions per language — conduct the interview, render the
-card, write the report — because those are three separate model calls, not three sections of one
+It therefore carries three sets of instructions per language - conduct the interview, render the
+card, write the report - because those are three separate model calls, not three sections of one
 text. Turn ceilings and card axes are declared in metadata so that the cost of an interview is
 bounded by construction rather than by convention.
 
@@ -77,12 +78,12 @@ https://raw.githubusercontent.com/atlas-registry/atlas/refs/heads/main/prompts.f
 https://raw.githubusercontent.com/atlas-registry/atlas/refs/heads/main/cartographies.en.json
 ```
 
-Available resources: `prompts`, `cartographies`, `guides`, `tools`, `labels` — each in `.fr.json`
+Available resources: `prompts`, `cartographies`, `guides`, `tools`, `labels` - each in `.fr.json`
 and `.en.json`.
 
 **Stability contract.** Fields may be added; they are not removed and their types do not change
 without coordination with the site. Treat the data as untrusted until you have validated it
-against your own schema — that is what the site does.
+against your own schema - that is what the site does.
 
 ---
 
@@ -107,7 +108,7 @@ scripts/
   load.mjs              reads the source
   validate.mjs          schemas and controlled vocabulary
   build.mjs             generates the artifacts
-  taxonomy.mjs          categories, labels, runtime tokens — all closed sets
+  taxonomy.mjs          categories, labels, runtime tokens - all closed sets
   variables.mjs         input variables with their labels in both locales
 ```
 
@@ -115,7 +116,7 @@ scripts/
 
 ## Contributing
 
-Contributions are welcome, and **[CONTRIBUTING.md](./CONTRIBUTING.md) is worth reading first** —
+Contributions are welcome, and **[CONTRIBUTING.md](./CONTRIBUTING.md) is worth reading first** -
 it states what Atlas accepts and what it does not, so you do not write a pull request for nothing.
 
 The short version: Cartographies, prompts and guides are open. The tools catalogue is frozen.
@@ -125,4 +126,4 @@ Submitting your own product is allowed if you disclose it and accept the same ba
 
 ## License
 
-MIT — see [LICENSE](./LICENSE).
+MIT - see [LICENSE](./LICENSE).
