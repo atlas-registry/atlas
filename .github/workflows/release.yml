@@ -24,10 +24,16 @@ jobs:
       contents: write
       pull-requests: write
 
+    # Le contexte `secrets` n'existe pas dans la condition d'un step - il est
+    # évalué trop tôt. Le secret passe donc par l'environnement du job, seul
+    # endroit où une condition peut le voir sans l'exposer.
+    env:
+      APP_CLIENT_ID: ${{ secrets.RELEASE_APP_CLIENT_ID }}
+
     steps:
       - name: Jeton de l'App de publication
         id: jeton
-        if: ${{ secrets.RELEASE_APP_CLIENT_ID != '' }}
+        if: ${{ env.APP_CLIENT_ID != '' }}
         uses: actions/create-github-app-token@v3
         with:
           client-id: ${{ secrets.RELEASE_APP_CLIENT_ID }}
