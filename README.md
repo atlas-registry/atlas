@@ -112,6 +112,20 @@ scripts/
   variables.mjs         input variables with their labels in both locales
 ```
 
+### Versions and changelog
+
+Versions are derived from conventional commit messages by
+[release-please](https://github.com/googleapis/release-please). Every push to `main` updates a
+standing release pull request; merging it tags the release, writes `CHANGELOG.md` and publishes
+the GitHub release. Nothing is committed to `main` behind your back.
+
+The workflow authenticates as a dedicated GitHub App, because the organisation forbids GitHub
+Actions from opening pull requests. Two repository secrets are required - `RELEASE_APP_CLIENT_ID`
+and `RELEASE_APP_PRIVATE_KEY`. Without them the job is skipped rather than failing.
+
+Tags matter beyond bookkeeping: `ATLAS_REGISTRY_REF` on the site side can point at a tag instead
+of `main`, so a broken publication does not reach production on its own.
+
 ---
 
 ## Contributing
