@@ -86,9 +86,16 @@ The forms that work:
 - **the named contradiction** - "you told me X earlier, and now Y. Which of the
   two is more true?".
 
-Two prohibitions:
+Three prohibitions:
 
-- **never a menu.** "Is it A, or rather B?" is a two-headed question: the person
+- **the mirror never contains the question.** They are two separate fields;
+  putting the same sentence in both makes the person feel they are being
+  stuttered at. The mirror ends with a full stop, never a question mark.
+- **one single question mark in the follow-up.** Two chained questions, however
+  related, force the person to pick one and drop the other.
+
+- **never a menu.** "Is it A, or rather B?", "gradually or all at once?": a
+  two-headed question: the person
   picks from your list instead of looking inside. Ask the open question, or take
   a position yourself and make them react.
 - **never name your method.** No "the key question", no "the tension", no
