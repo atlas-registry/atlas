@@ -1,0 +1,42 @@
+name: Release
+
+# Le changelog et les versions du registre sont dérivés des commits conventionnels.
+#
+# L'organisation interdit à GitHub Actions de créer des pull requests, et `main`
+# exige une PR : `GITHUB_TOKEN` ne peut donc rien faire ici. Le jeton vient d'une
+# App GitHub dédiée, qui n'appartient à personne et dont les droits se limitent à
+# ce dépôt. Tant que ses secrets ne sont pas posés, le job passe sans rien faire
+# plutôt que d'échouer à chaque merge.
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Jeton de l'App de publication
+        id: jeton
+        if: ${{ secrets.RELEASE_APP_CLIENT_ID != '' }}
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ secrets.RELEASE_APP_CLIENT_ID }}
+          private-key: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
+
+      - name: Préparer la publication
+        if: ${{ steps.jeton.outputs.token != '' }}
+        uses: googleapis/release-please-action@v4
+        with:
+          token: ${{ steps.jeton.outputs.token }}
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
