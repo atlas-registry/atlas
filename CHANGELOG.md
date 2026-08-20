@@ -2,6 +2,17 @@
 
 Toutes les modifications notables de ce projet seront documentées dans ce fichier.
 
+## [2.0.0](https://github.com/atlas-registry/atlas/compare/v1.1.0...v2.0.0) (2026-08-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* **prompts:** le prompt ikigai-archeologie ne figure plus dans les artefacts du registre. Tout consommateur qui le lit par son identifiant doit basculer sur la Cartographie raison-detre.
+
+### Ajouté
+
+* **prompts:** retirer ikigai-archeologie au profit de la Cartographie ([1b25fb3](https://github.com/atlas-registry/atlas/commit/1b25fb3dba19f213342bb43cece24a540178c96a))
+
 ## [1.1.0](https://github.com/atlas-registry/atlas/compare/v1.0.0...v1.1.0) (2026-08-20)
 
 Première version publiée. Le dépôt vivait depuis novembre 2025 sans être
