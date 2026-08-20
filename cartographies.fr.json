@@ -3,7 +3,26 @@
     "id": "raison-detre",
     "name": "Raison d'Être",
     "hook": "L'endroit précis où ta vie ne se recouvre pas encore",
-    "promesse": "En une dizaine de questions, l'endroit précis où ce que tu aimes, ce que tu fais bien et ce pour quoi on te paie ne se rejoignent pas encore - et le premier pas pour les rapprocher. Compte vingt minutes. Ta carte tout de suite, ton dossier complet par email.",
+    "promesse": "En une dizaine de questions, l'endroit précis où ce que tu aimes, ce que tu fais bien et ce pour quoi on te paie ne se rejoignent pas encore - et le premier pas pour les rapprocher. Compte vingt minutes. Ta carte se remplit pendant que tu réponds, ton dossier complet arrive juste après.",
+    "gains": [
+      {
+        "titre": "Ce que tu vas savoir",
+        "detail": "Lequel de tes quatre axes est en retard sur les autres, et pourquoi - avec tes propres mots cités, et le tour où tu les as dits."
+      },
+      {
+        "titre": "Ce que tu vas pouvoir faire",
+        "detail": "Un pas, un seul, faisable en 48 heures, avec le critère qui dit qu'il est fait. Jamais trois, jamais dix."
+      },
+      {
+        "titre": "Ce que ça te coûte",
+        "detail": "Une dizaine de questions, vingt minutes, aucun compte à créer. La carte se remplit à mesure : tu vois ce que tu gagnes avant d'avoir fini."
+      }
+    ],
+    "garanties": [
+      "Gratuit, sans compte ni email",
+      "Rien n'est enregistré : ta cartographie vit dans cet onglet",
+      "Rien n'est publié, rien n'est partagé"
+    ],
     "description": "Un entretien conduit qui cartographie les quatre forces qui décident de ton orientation, repère celle qui manque, et te rend une action à faire dans les 48 heures.",
     "attribution": "Le diagramme à quatre cercles utilisé ici est celui d'Andrés Zuzunaga, publié en 2012 sous le titre « Propósito ». Il est souvent appelé « ikigai » depuis un billet de blog de Marc Winn en 2014, mais il n'est ni japonais ni l'ikigai. L'ikigai se mesure avec l'échelle Ikigai-9.",
     "category": "introspection",

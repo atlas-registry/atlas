@@ -75,6 +75,8 @@ for (const locale of LOCALES) {
     name: documents.entretien[locale].data.name,
     hook: documents.entretien[locale].data.hook,
     promesse: documents.entretien[locale].data.promesse,
+    gains: documents.entretien[locale].data.gains,
+    garanties: documents.entretien[locale].data.garanties,
     description: documents.entretien[locale].data.description,
     attribution: documents.entretien[locale].data.attribution ?? null,
     category: meta.category,

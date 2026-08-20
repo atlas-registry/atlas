@@ -86,6 +86,15 @@ const cartographieTextSchema = z.object({
   // Sa longueur minimale n'est pas cosmétique, elle rend improbable une
   // promesse creuse en trois mots.
   promesse: z.string().min(80),
+  // Les trois gains décomposent la promesse pour la page : ce qu'on va savoir,
+  // ce qu'on pourra faire, ce que ça coûte. Le nombre est fixe parce qu'une
+  // page qui en aligne sept ne promet plus rien de précis.
+  gains: z
+    .array(z.object({ titre: z.string().min(1), detail: z.string().min(20) }))
+    .length(3),
+  // Les objections à lever avant qu'on confie quelque chose d'intime. Courtes,
+  // vérifiables, jamais des arguments de vente.
+  garanties: z.array(z.string().min(1).max(90)).min(2).max(4),
   description: z.string().min(1),
   attribution: z.string().min(1).optional(),
   axes: z.record(slug, z.string().min(1)),
