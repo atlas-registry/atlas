@@ -40,7 +40,7 @@ Before launching the prompt, take 10 minutes to write down:
 
 Use the "Ikigai - Archaeology of Meaning" prompt available on Atlas. This prompt is designed for deep and structured exploration.
 
--> [Access the Ikigai prompt](/prompts/ikigai-archeologie)
+-> [Take the Reason for Being Cartographie](/en/cartographies/raison-detre)
 
 ### Step 3: Dialogue with the AI
 
