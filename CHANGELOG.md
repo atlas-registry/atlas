@@ -6,6 +6,14 @@ Toutes les modifications notables de ce projet seront documentées dans ce fichi
 
 ### Ajouté
 
+- Une promesse qui montre ce qu'on y gagne
+- Harnais de comparaison de gabarits et variante d'origine
+- Confier l'ouverture de l'entretien au gabarit
+- Collection dédiée aux entretiens conduits
+- Add 15 prompts and 15 guides (FR/EN)
+- Add i18n support with FR/EN locale files
+- Add LinkedIn post creation guide and prompt for generating engaging content
+- Add ikigai entrepreneur guide
 - Add links to AI tools in tools.json for improved accessibility and resource navigation.
 - Update prompts with new hooks, descriptions, and examples for various business and introspection tools, enhancing user engagement and clarity.
 - Add new prompt for Personal Branding strategy on social media, enhancing marketing resources.
@@ -16,6 +24,53 @@ Toutes les modifications notables de ce projet seront documentées dans ce fichi
 
 ### Autres
 
+- Merge pull request #32 from atlas-registry/feat/promesse-cartographie
+
+feat(raison-detre): une promesse qui montre ce qu'on y gagne
+- Merge pull request #31 from atlas-registry/fix/relance-obligatoire
+
+fix(raison-detre): rendre la relance structurellement obligatoire
+- Merge pull request #30 from atlas-registry/feat/ouverture-entretien
+
+feat(raison-detre): confier l'ouverture de l'entretien au gabarit
+- Merge pull request #29 from atlas-registry/docs/perimetre-et-cartographies
+
+docs: documentation publique en anglais, périmètre éditorial et guide des Cartographies
+- Merge pull request #28 from atlas-registry/feat/cartographies
+
+feat(cartographies): collection dédiée aux entretiens conduits
+- Merge pull request #24 from atlas-registry/fix/guide-slugs
+
+fix: align guide slugs with prompt IDs
+- Merge pull request #23 from atlas-registry/feat/new-prompts-guides
+
+feat: add 15 prompts and 15 guides (FR/EN)
+- Merge pull request #22 from atlas-registry/feat/new-prompts-guides
+
+feat: add 15 prompts and 15 guides (FR/EN)
+- Merge pull request #21 from atlas-registry/feat/i18n-locale-files
+
+feat: add i18n support with FR/EN locale files
+- Merge pull request #20 from atlas-registry/folpe-patch-3
+
+Update prompts.json with new pricing strategy prompt
+- Update prompts.json with new pricing strategy prompt
+
+Refactor prompts.json to include new pricing strategy prompt and update example inputs/outputs.
+- Merge pull request #19 from atlas-registry/feb-spr
+
+feat: add LinkedIn post creation guide and prompt
+- Merge pull request #18 from atlas-registry/folpe-patch-2
+
+Update content for Ikigai entrepreneurial guide
+- Update content for Ikigai entrepreneurial guide
+- Merge pull request #17 from atlas-registry:feat/guideIkigai
+
+feat: add ikigai entrepreneur guide
+- Merge pull request #16 from atlas-registry/folpe-patch-1
+
+Update issue templates
+- Update issue templates
 - Merge pull request #4 from folpe/chore/update-changelog
 
 docs: update changelog
@@ -52,10 +107,20 @@ Add MIT License to the project
 
 ### Corrigé
 
+- Interdire le miroir bégayant et la double question
+- La relance teste l'hypothèse au lieu de collecter des faits
+- Restaurer le répertoire de questions et bannir les cadratins
+- Rendre la relance structurellement obligatoire
+- Align guide slugs with prompt IDs (hyphens to underscores)
+- Align guide IDs with prompt IDs (hyphens to underscores)
 - Update changelog workflow to create a pull request for changelog updates instead of direct commits, enhancing version control and collaboration.
 
 ### Documentation
 
+- Corriger le cadrage linguistique et retirer les tirets cadratins
+- Passer la documentation publique en anglais et la remettre à niveau
+- Périmètre éditorial explicite et guide des Cartographies
+- Update changelog (#15)
 - Update changelog (#14)
 - Update changelog (#13)
 - Update changelog (#12)
@@ -68,8 +133,13 @@ Add MIT License to the project
 - Update changelog
 - Update changelog
 
+### Performance
+
+- Réduire le gabarit de 12 000 à 4 300 caractères
+
 ### Refactoring
 
+- Source structurée, vocabulaire contrôlé et validation (#27)
 - Revise prompt for identifying user's "zone de génie" to enhance clarity and effectiveness, focusing on observable impact and structured questioning methodology.
 - Revise guides in guides.json to enhance clarity and usability, updating descriptions, content structure, and read times for improved user understanding.
 - Revise tool entries in tools.json to enhance clarity and categorization, updating descriptions and categories for various AI tools, and removing outdated entries.
