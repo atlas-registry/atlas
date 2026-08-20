@@ -240,3 +240,30 @@ The registry's public documentation is in English so that anyone can contribute.
 itself is bilingual**: every resource must be provided in French and in English, and neither is a
 translation afterthought. French is the audience the project currently reaches, and the French
 wording is the one that gets the most editorial attention.
+
+## Working on an interview template
+
+Prompt engineering is done on comparable outputs, not on impressions. The
+registry ships a harness for that.
+
+```bash
+npm run comparer raison-detre                                  # current template
+npm run comparer raison-detre -- --variantes courant,origine   # side by side
+npm run comparer raison-detre -- --fixture dev-infra --tours 3
+```
+
+It requires `ANTHROPIC_API_KEY` in the environment. Each run costs a few cents.
+
+**Variants** live in `content/cartographies/<id>/variantes/<name>.fr.md`. They
+are frozen alternatives kept for comparison — `origine.fr.md` holds the original
+Ikigai prompt, which accounted for 53% of the registry's copies and remains the
+reference any evolution is measured against. A variant without runtime tokens is
+played in free-text mode.
+
+**Fixtures** live in `fixtures/<name>.json`: a set of scripted answers, so two
+templates face exactly the same person.
+
+The harness reports **form defects** — menus, missing spaces before double
+punctuation, em dashes, multiple questions, a mirror repeating its own question,
+emoji. These are counted, not judged. Quality of substance still requires
+reading the output.
