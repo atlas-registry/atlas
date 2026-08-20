@@ -4,8 +4,25 @@ hook: The exact place where your life does not yet overlap
 promesse: >-
   In about ten questions, the exact place where what you love, what you are good
   at and what you are paid for do not yet meet - and the first step to bring
-  them closer. Allow twenty minutes. Your card straight away, your full report
-  by email.
+  them closer. Allow twenty minutes. Your card fills in while you answer, your
+  full report arrives right after.
+gains:
+  - titre: What you will know
+    detail: >-
+      Which of your four axes lags behind the others, and why - with your own
+      words quoted, and the turn where you said them.
+  - titre: What you will be able to do
+    detail: >-
+      One step, a single one, doable within 48 hours, with the criterion that
+      says it is done. Never three, never ten.
+  - titre: What it costs you
+    detail: >-
+      About ten questions, twenty minutes, no account to create. The card fills
+      in as you go: you see what you are getting before you are done.
+garanties:
+  - Free, no account, no email
+  - "Nothing is stored: your cartography lives in this tab"
+  - Nothing is published, nothing is shared
 description: >-
   A guided interview that maps the four forces deciding your direction, finds
   the one that is missing, and hands you one action to take within 48 hours.
