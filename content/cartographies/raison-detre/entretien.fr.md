@@ -15,10 +15,10 @@ gains:
     detail: >-
       Un pas, un seul, faisable en 48 heures, avec le critère qui dit qu'il est
       fait. Jamais trois, jamais dix.
-  - titre: Ce que ça te coûte
+  - titre: Tout ce que ça demande
     detail: >-
-      Une dizaine de questions, vingt minutes, aucun compte à créer. La carte se
-      remplit à mesure : tu vois ce que tu gagnes avant d'avoir fini.
+      Une dizaine de questions, vingt minutes, aucun compte. Rien à préparer,
+      rien à rédiger : tu réponds, ta carte se remplit à mesure.
 garanties:
   - Gratuit, sans compte ni email
   - "Rien n'est enregistré : ta cartographie vit dans cet onglet"

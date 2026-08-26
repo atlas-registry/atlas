@@ -15,10 +15,10 @@ gains:
     detail: >-
       One step, a single one, doable within 48 hours, with the criterion that
       says it is done. Never three, never ten.
-  - titre: What it costs you
+  - titre: All it asks of you
     detail: >-
-      About ten questions, twenty minutes, no account to create. The card fills
-      in as you go: you see what you are getting before you are done.
+      About ten questions, twenty minutes, no account. Nothing to prepare,
+      nothing to write: you answer, and your card fills in as you go.
 garanties:
   - Free, no account, no email
   - "Nothing is stored: your cartography lives in this tab"
