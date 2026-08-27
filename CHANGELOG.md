@@ -2,6 +2,15 @@
 
 Toutes les modifications notables de ce projet seront documentées dans ce fichier.
 
+## [2.1.0](https://github.com/atlas-registry/atlas/compare/v2.0.0...v2.1.0) (2026-08-27)
+
+
+### Ajouté
+
+* **cartographies:** retirer la duree de la promesse et du troisieme gain ([35defae](https://github.com/atlas-registry/atlas/commit/35defaee7e085c0165f8a5f40320e15761c2525f))
+* **cartographies:** tourner le troisieme gain de Raison d'Etre en positif ([4f8bc98](https://github.com/atlas-registry/atlas/commit/4f8bc98de15ce58ccff9190bb8d21ae9cfad8b78))
+* **cartographies:** tourner le troisième gain de Raison d'Être en positif ([78777d0](https://github.com/atlas-registry/atlas/commit/78777d087348586824c609230597b1e31e3bcdbf))
+
 ## [2.0.0](https://github.com/atlas-registry/atlas/compare/v1.1.0...v2.0.0) (2026-08-20)
 
 
