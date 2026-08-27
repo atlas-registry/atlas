@@ -2,10 +2,9 @@
 name: Reason for Being
 hook: The exact place where your life does not yet overlap
 promesse: >-
-  In about ten questions, the exact place where what you love, what you are good
-  at and what you are paid for do not yet meet - and the first step to bring
-  them closer. Allow twenty minutes. Your card fills in while you answer, your
-  full report arrives right after.
+  The exact place where what you love, what you are good at and what you are
+  paid for do not yet meet - and the first step to bring them closer. Your card
+  fills in while you answer, your full report arrives right after.
 gains:
   - titre: What you will know
     detail: >-
@@ -15,10 +14,10 @@ gains:
     detail: >-
       One step, a single one, doable within 48 hours, with the criterion that
       says it is done. Never three, never ten.
-  - titre: What it costs you
+  - titre: All it asks of you
     detail: >-
-      About ten questions, twenty minutes, no account to create. The card fills
-      in as you go: you see what you are getting before you are done.
+      About ten questions, no account. Nothing to prepare, nothing to write:
+      you answer, that is all.
 garanties:
   - Free, no account, no email
   - "Nothing is stored: your cartography lives in this tab"

@@ -2,10 +2,10 @@
 name: Raison d'Être
 hook: L'endroit précis où ta vie ne se recouvre pas encore
 promesse: >-
-  En une dizaine de questions, l'endroit précis où ce que tu aimes, ce que tu
-  fais bien et ce pour quoi on te paie ne se rejoignent pas encore - et le
-  premier pas pour les rapprocher. Compte vingt minutes. Ta carte se remplit
-  pendant que tu réponds, ton dossier complet arrive juste après.
+  L'endroit précis où ce que tu aimes, ce que tu fais bien et ce pour quoi on
+  te paie ne se rejoignent pas encore - et le premier pas pour les rapprocher.
+  Ta carte se remplit pendant que tu réponds, ton dossier complet arrive juste
+  après.
 gains:
   - titre: Ce que tu vas savoir
     detail: >-
@@ -15,10 +15,10 @@ gains:
     detail: >-
       Un pas, un seul, faisable en 48 heures, avec le critère qui dit qu'il est
       fait. Jamais trois, jamais dix.
-  - titre: Ce que ça te coûte
+  - titre: Tout ce que ça demande
     detail: >-
-      Une dizaine de questions, vingt minutes, aucun compte à créer. La carte se
-      remplit à mesure : tu vois ce que tu gagnes avant d'avoir fini.
+      Une dizaine de questions, aucun compte. Rien à préparer, rien à rédiger :
+      tu réponds, c'est tout.
 garanties:
   - Gratuit, sans compte ni email
   - "Rien n'est enregistré : ta cartographie vit dans cet onglet"
