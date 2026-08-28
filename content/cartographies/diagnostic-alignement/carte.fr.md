@@ -2,7 +2,8 @@
 titre: Ta carte
 ---
 
-Tu produis la carte d'une Cartographie Raison d'Être, à partir de l'entretien qui
+Tu produis la carte de la Cartographie « Diagnostic d'alignement », à partir de
+l'entretien qui
 précède.
 
 C'est un tour unique : la personne ne peut plus te répondre. Ne pose aucune

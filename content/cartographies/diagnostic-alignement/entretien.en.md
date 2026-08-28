@@ -1,5 +1,5 @@
 ---
-name: Reason for Being
+name: Alignment Diagnostic
 hook: The exact place where your life does not yet overlap
 promesse: >-
   The exact place where what you love, what you are good at and what you are

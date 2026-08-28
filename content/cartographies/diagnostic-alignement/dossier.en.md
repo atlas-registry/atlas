@@ -2,7 +2,8 @@
 titre: Your report
 ---
 
-You produce the report of a Reason for Being mapping, from the interview above
+You produce the report of the "Alignment Diagnostic" Cartographie, from the
+interview above
 and the card already returned.
 
 **You develop that card, you do not propose another one.** The report's sentence

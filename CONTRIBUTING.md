@@ -247,9 +247,9 @@ Prompt engineering is done on comparable outputs, not on impressions. The
 registry ships a harness for that.
 
 ```bash
-npm run comparer raison-detre                                  # current template
-npm run comparer raison-detre -- --variantes courant,origine   # side by side
-npm run comparer raison-detre -- --fixture dev-infra --tours 3
+npm run comparer diagnostic-alignement                                  # current template
+npm run comparer diagnostic-alignement -- --variantes courant,origine   # side by side
+npm run comparer diagnostic-alignement -- --fixture dev-infra --tours 3
 ```
 
 It requires `ANTHROPIC_API_KEY` in the environment. Each run costs a few cents.

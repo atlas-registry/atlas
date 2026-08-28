@@ -1,5 +1,5 @@
 ---
-name: Raison d'Être
+name: Diagnostic d'alignement
 hook: L'endroit précis où ta vie ne se recouvre pas encore
 promesse: >-
   L'endroit précis où ce que tu aimes, ce que tu fais bien et ce pour quoi on
