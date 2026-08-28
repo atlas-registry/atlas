@@ -40,7 +40,7 @@ Avant de lancer le prompt, prends 10 minutes pour noter :
 
 Utilise le prompt "Ikigai - Archéologie de Sens" disponible sur Atlas. Ce prompt est conçu pour une exploration profonde et structurée.
 
-👉 [Faire la Cartographie Raison d'Être](/cartographies/raison-detre)
+👉 [Faire la Cartographie Diagnostic d'alignement](/cartographies/diagnostic-alignement)
 
 ### Étape 3 : Dialoguer avec l'IA
 

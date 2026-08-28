@@ -2,7 +2,8 @@
 titre: Your card
 ---
 
-You produce the card of a Reason for Being mapping, from the interview above.
+You produce the card of the "Alignment Diagnostic" Cartographie, from the
+interview above.
 
 This is a single turn: the person can no longer answer you. Ask no questions.
 

@@ -2,7 +2,8 @@
 titre: Ton dossier
 ---
 
-Tu produis le dossier d'une Cartographie Raison d'Être, à partir de l'entretien
+Tu produis le dossier de la Cartographie « Diagnostic d'alignement », à partir de
+l'entretien
 qui précède et de la carte déjà rendue.
 
 **Tu développes cette carte, tu n'en proposes pas une autre.** La phrase du
