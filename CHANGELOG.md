@@ -2,6 +2,17 @@
 
 Toutes les modifications notables de ce projet seront documentées dans ce fichier.
 
+## [3.0.0](https://github.com/atlas-registry/atlas/compare/v2.1.0...v3.0.0) (2026-08-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* l'identifiant « raison-detre » devient « diagnostic-alignement ». Tout consommateur epingle sur l'ancien id ne trouve plus la Cartographie. Cote site, la montee de REGISTRY_VERSION doit partir avec la redirection 301 de /cartographies/raison-detre.
+
+### Ajouté
+
+* renommer la Cartographie en Diagnostic d'alignement ([a8e8079](https://github.com/atlas-registry/atlas/commit/a8e80799adbcb4df62032ab43146ebfd873a03bb))
+
 ## [2.1.0](https://github.com/atlas-registry/atlas/compare/v2.0.0...v2.1.0) (2026-08-27)
 
 
